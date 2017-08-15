@@ -1,0 +1,12 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+.DS_Store
+*.log
+node_modules
+bower_components
+_sass__copy
+_design
+*.node
+.gulp
+*.orig
+_gulp_favicon_generator/faviconData.json
