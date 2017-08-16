@@ -29,77 +29,113 @@ body
 
 body
   background: $color-white
-  font-size: rem(16)
-  font-family: $primary-font
+  font-size: rem(14)
+  font-family: $font-roboto
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
-  color: $primary-color
-  font-weight: bold
+  color: $color-dark
+  font-weight: 400
   text-decoration: none
-  margin: 0 0 25px 0
+  margin: 0 0 15px 0
+  font-family: $font-intro
+  text-transform: uppercase
+  display: block
+  small
+    font-size: rem(12)
+    display: inline-block
+    margin-left: 10px
+    color: #959595
+    font-weight: 400
+    font-family: $font-roboto
+    text-transform: none
 
 .h1, h1
-  font-size: rem(21)
+  font-size: rem(50)
   line-height: 1.05
   letter-spacing: -1px
+  color: $color-blue
+  margin-bottom: 25px
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(28)
   line-height: 1.14
+  margin-bottom: 20px
+  &.line
+    padding-left: 54px
+    position: relative
+    &::before
+      position: absolute
+      left: 0
+      top: 15px
+      height: 1px
+      width: 40px
+      background-color: $color-dark
+      content: ''
 
 .h3, h3
-  font-size: rem(16)
+  font-size: rem(22)
   line-height: 1.38
+  &.line
+    padding-left: 50px
+    position: relative
+    &::before
+      position: absolute
+      left: 0
+      top: 14px
+      height: 1px
+      width: 40px
+      background-color: $color-dark
+      content: ''
 
 .h4, h4
-  font-size: rem(14)
+  font-size: rem(20)
   line-height: 1.38
 
 .h5, h5
-  font-size: rem(13)
+  font-size: rem(18)
 
 .h6, h6
-  font-size: rem(12)
+  font-size: rem(16)
 
 .small, small
   font-size: rem(12)
   line-height: 1.2
 
 p
-  margin: 0 0 20px 0
+  margin: 0 0 10px 0
+  line-height: 1.7
+  &+h2, &+.h2, &+h3, &+.h3, &+h4, &+.h4, &+h5, &+.h5, &+h6, &+.h6
+    margin-top: 20px
 
 em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-roboto-bold
 
 hr
-  border: solid #ddd
+  border: solid $color-gray
   border-width: 1px 0 0
   clear: both
-  margin: 10px 0 30px
+  margin: 10px 0 25px
   height: 0
 
 // Links
-a, .link
+a
   color: $link-color
-  text-decoration: underline
+  text-decoration: none
   outline: none
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s
 
   &:hover, &:focus, &:active
     color: $link-color
-    text-decoration: none
+    text-decoration: underline
     outline: none
-
-a.link
-  &:hover, &:focus, &:active
-    text-decoration: none
 
 .container
   margin: 0 auto
@@ -125,23 +161,23 @@ a.link
   top: 0
   position: fixed
   z-index: 10000
-  background-color: #241e20
+  background-color: $color-white
 
   &__block
-    background: #927a64
+    background: $color-blue
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: #927a64
+    color: $color-blue
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
-    transition: transform(-50%,-50%)
+    transform: translate(-50%,-50%)
     &:before, &:after
-      background: #927a64
+      background: $color-blue
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -207,6 +243,9 @@ a.link
   &-round, &--round
     border-radius: 50%
 
+  &-thumbnails, &--thumbnails
+    border: 6px solid $color-gray
+
 /* section */
 .section
   padding: 50px 0
@@ -255,3 +294,727 @@ ol li
   display: inline-block
   // &--sprite
   //   @include sprite($img-name)
+
+.content
+  padding-bottom: 30px
+
+.banner
+  margin-bottom: 25px
+
+.w100per
+  width: 100% !important
+.nowrap
+  white-space: nowrap !important
+
+.color
+  &--blue
+    color: $color-blue !important
+  &--gray
+    color: $color-gray !important
+  &--white
+    color: $color-white !important
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+
+.hamburger
+  padding: 15px 15px
+  display: inline-block
+  cursor: pointer
+  transition-property: opacity, filter
+  transition-duration: 0.15s
+  transition-timing-function: linear
+  font: inherit
+  color: inherit
+  text-transform: none
+  background-color: transparent
+  border: 0
+  margin: 0
+  overflow: visible
+  &:hover
+    opacity: 0.7
+
+.hamburger-box
+  width: 40px
+  height: 24px
+  display: inline-block
+  position: relative
+
+.hamburger-inner
+  display: block
+  top: 50%
+  margin-top: -2px
+  width: 40px
+  height: 4px
+  background-color: #000
+  border-radius: 4px
+  position: absolute
+  transition-property: transform
+  transition-duration: 0.15s
+  transition-timing-function: ease
+  &::before, &::after
+    width: 40px
+    height: 4px
+    background-color: #000
+    border-radius: 4px
+    position: absolute
+    transition-property: transform
+    transition-duration: 0.15s
+    transition-timing-function: ease
+  &::before, &::after
+    content: ""
+    display: block
+  &::before
+    top: -10px
+  &::after
+    bottom: -10px
+
+/*
+ * * 3DX
+
+.hamburger--3dx
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateY(180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * 3DX Reverse
+
+.hamburger--3dx-r
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateY(-180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * 3DY
+
+.hamburger--3dy
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateX(-180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * 3DY Reverse
+
+.hamburger--3dy-r
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateX(180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * 3DXY
+
+.hamburger--3dxy
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateX(180deg) rotateY(180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * 3DXY Reverse
+
+.hamburger--3dxy-r
+  .hamburger-box
+    perspective: 80px
+  .hamburger-inner
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &::before, &::after
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &.is-active .hamburger-inner
+    background-color: transparent
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg)
+    &::before
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      transform: translate3d(0, -10px, 0) rotate(-45deg)
+
+/*
+ * * Arrow
+
+.hamburger--arrow.is-active .hamburger-inner
+  &::before
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1)
+  &::after
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1)
+
+/*
+ * * Arrow Right
+
+.hamburger--arrow-r.is-active .hamburger-inner
+  &::before
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1)
+  &::after
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1)
+
+/*
+ * * Arrow Alt
+
+.hamburger--arrowalt
+  .hamburger-inner
+    &::before
+      transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    &::after
+      transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+  &.is-active .hamburger-inner
+    &::before
+      top: 0
+      transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1)
+      transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    &::after
+      bottom: 0
+      transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1)
+      transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+
+/*
+ * * Arrow Alt Right
+
+.hamburger--arrowalt-r
+  .hamburger-inner
+    &::before
+      transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    &::after
+      transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+  &.is-active .hamburger-inner
+    &::before
+      top: 0
+      transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1)
+      transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+    &::after
+      bottom: 0
+      transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1)
+      transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+
+/*
+ * Arrow Turn
+
+.hamburger--arrowturn.is-active .hamburger-inner
+  transform: rotate(-180deg)
+  &::before
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1)
+  &::after
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1)
+
+/*
+ * Arrow Turn Right
+
+.hamburger--arrowturn-r.is-active .hamburger-inner
+  transform: rotate(-180deg)
+  &::before
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1)
+  &::after
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1)
+
+/*
+ * * Boring
+
+.hamburger--boring
+  .hamburger-inner
+    transition-property: none
+    &::before, &::after
+      transition-property: none
+  &.is-active .hamburger-inner
+    transform: rotate(45deg)
+    &::before
+      top: 0
+      opacity: 0
+    &::after
+      bottom: 0
+      transform: rotate(-90deg)
+
+/*
+ * * Collapse
+
+.hamburger--collapse
+  .hamburger-inner
+    top: auto
+    bottom: 0
+    transition-duration: 0.13s
+    transition-delay: 0.13s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      top: -20px
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear
+    &::before
+      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: translate3d(0, -10px, 0) rotate(-45deg)
+    transition-delay: 0.22s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::after
+      top: 0
+      opacity: 0
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear
+    &::before
+      top: 0
+      transform: rotate(-90deg)
+      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Collapse Reverse
+
+.hamburger--collapse-r
+  .hamburger-inner
+    top: auto
+    bottom: 0
+    transition-duration: 0.13s
+    transition-delay: 0.13s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      top: -20px
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear
+    &::before
+      transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: translate3d(0, -10px, 0) rotate(45deg)
+    transition-delay: 0.22s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::after
+      top: 0
+      opacity: 0
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear
+    &::before
+      top: 0
+      transform: rotate(90deg)
+      transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Elastic
+
+.hamburger--elastic
+  .hamburger-inner
+    top: 2px
+    transition-duration: 0.275s
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    &::before
+      top: 10px
+      transition: opacity 0.125s 0.275s ease
+    &::after
+      top: 20px
+      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+  &.is-active .hamburger-inner
+    transform: translate3d(0, 10px, 0) rotate(135deg)
+    transition-delay: 0.075s
+    &::before
+      transition-delay: 0s
+      opacity: 0
+    &::after
+      transform: translate3d(0, -20px, 0) rotate(-270deg)
+      transition-delay: 0.075s
+
+/*
+ * * Elastic Reverse
+
+.hamburger--elastic-r
+  .hamburger-inner
+    top: 2px
+    transition-duration: 0.275s
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    &::before
+      top: 10px
+      transition: opacity 0.125s 0.275s ease
+    &::after
+      top: 20px
+      transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+  &.is-active .hamburger-inner
+    transform: translate3d(0, 10px, 0) rotate(-135deg)
+    transition-delay: 0.075s
+    &::before
+      transition-delay: 0s
+      opacity: 0
+    &::after
+      transform: translate3d(0, -20px, 0) rotate(270deg)
+      transition-delay: 0.075s
+
+/*
+ * * Emphatic
+
+.hamburger--emphatic
+  overflow: hidden
+  .hamburger-inner
+    transition: background-color 0.125s 0.175s ease-in
+    &::before
+      left: 0
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+    &::after
+      top: 10px
+      right: 0
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+  &.is-active .hamburger-inner
+    transition-delay: 0s
+    transition-timing-function: ease-out
+    background-color: transparent
+    &::before
+      left: -80px
+      top: -80px
+      transform: translate3d(80px, 80px, 0) rotate(45deg)
+      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+    &::after
+      right: -80px
+      top: -80px
+      transform: translate3d(-80px, 80px, 0) rotate(-45deg)
+      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+/*
+ * * Emphatic Reverse
+
+.hamburger--emphatic-r
+  overflow: hidden
+  .hamburger-inner
+    transition: background-color 0.125s 0.175s ease-in
+    &::before
+      left: 0
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+    &::after
+      top: 10px
+      right: 0
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+  &.is-active .hamburger-inner
+    transition-delay: 0s
+    transition-timing-function: ease-out
+    background-color: transparent
+    &::before
+      left: -80px
+      top: 80px
+      transform: translate3d(80px, -80px, 0) rotate(-45deg)
+      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+    &::after
+      right: -80px
+      top: 80px
+      transform: translate3d(-80px, -80px, 0) rotate(45deg)
+      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+/*
+ * * Minus
+
+.hamburger--minus
+  .hamburger-inner
+    &::before, &::after
+      transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear
+  &.is-active .hamburger-inner
+    &::before, &::after
+      opacity: 0
+      transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear
+    &::before
+      top: 0
+    &::after
+      bottom: 0
+
+/*
+ * * Slider
+
+.hamburger--slider
+  .hamburger-inner
+    top: 2px
+    &::before
+      top: 10px
+      transition-property: transform, opacity
+      transition-timing-function: ease
+      transition-duration: 0.15s
+    &::after
+      top: 20px
+  &.is-active .hamburger-inner
+    transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::before
+      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
+      opacity: 0
+    &::after
+      transform: translate3d(0, -20px, 0) rotate(-90deg)
+
+/*
+ * * Slider Reverse
+
+.hamburger--slider-r
+  .hamburger-inner
+    top: 2px
+    &::before
+      top: 10px
+      transition-property: transform, opacity
+      transition-timing-function: ease
+      transition-duration: 0.15s
+    &::after
+      top: 20px
+  &.is-active .hamburger-inner
+    transform: translate3d(0, 10px, 0) rotate(-45deg)
+    &::before
+      transform: rotate(45deg) translate3d(5.71429px, -6px, 0)
+      opacity: 0
+    &::after
+      transform: translate3d(0, -20px, 0) rotate(90deg)
+
+/*
+ * * Spin
+
+.hamburger--spin
+  .hamburger-inner
+    transition-duration: 0.22s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::before
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in
+    &::after
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(225deg)
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::before
+      top: 0
+      opacity: 0
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out
+    &::after
+      bottom: 0
+      transform: rotate(-90deg)
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Spin Reverse
+
+.hamburger--spin-r
+  .hamburger-inner
+    transition-duration: 0.22s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::before
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in
+    &::after
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(-225deg)
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::before
+      top: 0
+      opacity: 0
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out
+    &::after
+      bottom: 0
+      transform: rotate(90deg)
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Spring
+
+.hamburger--spring
+  .hamburger-inner
+    top: 2px
+    transition: background-color 0s 0.13s linear
+    &::before
+      top: 10px
+      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      top: 20px
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transition-delay: 0.22s
+    background-color: transparent
+    &::before
+      top: 0
+      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1)
+      transform: translate3d(0, 10px, 0) rotate(45deg)
+    &::after
+      top: 0
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1)
+      transform: translate3d(0, 10px, 0) rotate(-45deg)
+
+/*
+ * * Spring Reverse
+
+.hamburger--spring-r
+  .hamburger-inner
+    top: auto
+    bottom: 0
+    transition-duration: 0.13s
+    transition-delay: 0s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      top: -20px
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear
+    &::before
+      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: translate3d(0, -10px, 0) rotate(-45deg)
+    transition-delay: 0.22s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::after
+      top: 0
+      opacity: 0
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear
+    &::before
+      top: 0
+      transform: rotate(90deg)
+      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Stand
+
+.hamburger--stand
+  .hamburger-inner
+    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear
+    &::before
+      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(90deg)
+    background-color: transparent
+    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear
+    &::before
+      top: 0
+      transform: rotate(-45deg)
+      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::after
+      bottom: 0
+      transform: rotate(45deg)
+      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Stand Reverse
+
+.hamburger--stand-r
+  .hamburger-inner
+    transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear
+    &::before
+      transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::after
+      transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(-90deg)
+    background-color: transparent
+    transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear
+    &::before
+      top: 0
+      transform: rotate(-45deg)
+      transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::after
+      bottom: 0
+      transform: rotate(45deg)
+      transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Squeeze
+
+.hamburger--squeeze
+  .hamburger-inner
+    transition-duration: 0.075s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &::before
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease
+    &::after
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  &.is-active .hamburger-inner
+    transform: rotate(45deg)
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    &::before
+      top: 0
+      opacity: 0
+      transition: top 0.075s ease, opacity 0.075s 0.12s ease
+    &::after
+      bottom: 0
+      transform: rotate(-90deg)
+      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+/*
+ * * Vortex
+
+.hamburger--vortex
+  .hamburger-inner
+    transition-duration: 0.2s
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    &::before, &::after
+      transition-duration: 0s
+      transition-delay: 0.1s
+      transition-timing-function: linear
+    &::before
+      transition-property: top, opacity
+    &::after
+      transition-property: bottom, transform
+  &.is-active .hamburger-inner
+    transform: rotate(765deg)
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    &::before, &::after
+      transition-delay: 0s
+    &::before
+      top: 0
+      opacity: 0
+    &::after
+      bottom: 0
+      transform: rotate(90deg)
+
+/*
+ * * Vortex Reverse
+
+.hamburger--vortex-r
+  .hamburger-inner
+    transition-duration: 0.2s
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    &::before, &::after
+      transition-duration: 0s
+      transition-delay: 0.1s
+      transition-timing-function: linear
+    &::before
+      transition-property: top, opacity
+    &::after
+      transition-property: bottom, transform
+  &.is-active .hamburger-inner
+    transform: rotate(-765deg)
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    &::before, &::after
+      transition-delay: 0s
+    &::before
+      top: 0
+      opacity: 0
+    &::after
+      bottom: 0
+      transform: rotate(-90deg)

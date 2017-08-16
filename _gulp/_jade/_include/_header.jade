@@ -2,9 +2,17 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
+    -var navigation = { 'Главная': '#', 'Тариф': '#', 'Для водителей': '#', 'Контакты': '#', 'О компании': '#'};
     
-    nav.navigation(role="navigation")
+    .header__logo
+      a(href="#!")
+      img(src="./img/logo.png", alt="")    
+    
+    .header__phone
+      a(href="callto:") 
+        strong +7 (495) 800-80-80
+    
+    nav.header__navigation(role="navigation")
       ul
         each val, key in navigation
           if active === key
@@ -13,3 +21,5 @@ header.header
           else
             li
               a(href=val, title=key)= key
+
+.header-separator

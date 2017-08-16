@@ -1,8 +1,79 @@
 /* modules */
+.hamburger
+  &--header
+    opacity: 1 !important
+    padding: 0 15px
+    height: 40px
+    width: 120px
+    position: relative
+    text-align: center
+    display: none
+    margin: 0 auto
+    z-index: 100
+    .hamburger-box
+      width: 14px
+      height: 12px
+      // background-color: pink
+    .hamburger-inner
+      &::before, &::after
+        background-color: $color-white
+        border-radius: 0
+        width: 14px
+        height: 2px
+      &::before
+        top: 5px !important
+      &::after
+        top: 10px !important
+      background-color: $color-white
+      border-radius: 0
+      width: 14px
+      height: 2px
+      margin-top: 0
+      top: 0 !important
+    &.is-active
+      .hamburger-inner
+        transform: translate3d(0, 5px, 0) rotate(45deg)
+        background-color: #989898
+        &::before, &::after
+          background-color: #989898
+        &::before
+          transform: rotate(-45deg) translate3d(-5.71429px, -2px, 0)
+        &::after
+          transform: translate3d(0, -10px, 0) rotate(-90deg)
+      strong
+        color: #989898
+    strong
+      color: $color-white
+      text-transform: uppercase
+      font-size: rem(18)
+      font-family: $font-intro
+      margin-left: 7px
+      // position: absolute
 
-/* gallery */
-.gallery
-  &__item
-    padding: 5px
-    background: $color-white
-    box-shadow: 0 0 5px rgba($color-black,0.5)
+.tab-pane
+  display: none
+  &.active
+    display: block
+
+// table
+div.table
+  display: table
+  &>div
+    display: table-cell
+    vertical-align: top
+    &+div
+      padding-left: 30px
+
+// Table
+table.table
+  margin-bottom: 15px
+  td
+    padding: 5px 0
+    p
+      &:last-child
+        margin-bottom: 0
+    &+td
+      padding-left: 15px
+
+.visible-xxs-inline-block
+  display: none !important

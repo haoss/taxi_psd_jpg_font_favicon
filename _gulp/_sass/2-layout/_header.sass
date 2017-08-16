@@ -1,8 +1,24 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1000
+  width: 100%
+  background: $color-white
+  box-shadow: 0 2px 2px rgba($color-black,.1)
+  height: 80px
+  +clearfix
 
-  ul
-    li
-      display: inline
+  &-separator
+    height: 80px
+
+  &__logo
+    float: left
+
+  &__phone
+    float: right
+
+  &__navigation
+    padding-left: 180px
+    padding-right: 277px
