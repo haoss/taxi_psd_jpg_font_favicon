@@ -1,4 +1,34 @@
 /* footer */
 .footer
-  background-color: $color-gray
-  height: 100px
+  font-size: rem(14)
+  color: $color-white
+  font-family: $font-intro
+  text-transform: uppercase
+  background:
+    color: $color-white
+    image: url('../img/footer.png')
+    repeat: no-repeat
+    position: bottom center
+  height: 190px
+
+  &__copyright
+    float: right
+
+  &__social
+    +clearfix
+    float: right
+    margin-top: -2px
+    margin-right: 80px
+    a
+      float: left
+      width: 23px
+      height: 24px
+      border-radius: 50%
+      // border: 2px solid $color-white
+      text-align: center
+      line-height: 24px
+      background-color: transparent
+      &+a
+        margin-left: 8px
+      &:hover
+        // background-color: $color-red

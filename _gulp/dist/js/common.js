@@ -10,24 +10,6 @@ $(document).on('ready', function(){
     });
   };
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -79,7 +61,23 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
-  console.log('ready');
+  // Menu
+  $('#btn-mobile').on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    $('.header').toggleClass('is-active');
+  });
+
+  $(document).on('click', function(){
+    setTimeout(function(){
+      $('#btn-mobile').removeClass('is-active');
+      $('.header').removeClass('is-active');
+    }, 500)
+  });
+
+  $(document).on('click', '.header__navigation', function(e){
+    e.stopPropagation();
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -98,9 +96,16 @@ $(document).on('ready', function(){
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
-  console.log('load');
 });
 
+$(window).on('resize', function(){
+  var width = $(window).width();
+
+  if (width > 991) {
+    $('#btn-mobile').removeClass('is-active');
+    $('.header').removeClass('is-active');
+  }
+});
 /*
 version 2015-09-23 14:30 GMT +2
 */

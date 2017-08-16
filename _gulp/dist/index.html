@@ -36,6 +36,12 @@
             <div class="container">
                 <div class="header__logo"><a href="#!"></a><img src="./img/logo.png" alt=""></div>
                 <div class="header__phone"><a href="callto:"> <strong>+7 (495) 800-80-80</strong></a></div>
+                <div class="header__menu__background"></div>
+                <div class="header__button">
+                    <div class="header__button__wrapper">
+                        <button id="btn-mobile" type="button" class="hamburger hamburger--slider hamburger--header"><span class="hamburger-box"><span class="hamburger-inner"></span></span><strong>Меню сайта</strong></button>
+                    </div>
+                </div>
                 <nav role="navigation" class="header__navigation">
                     <ul>
                         <li class="active"><a href="#" title="Главная">Главная</a></li>
@@ -47,23 +53,77 @@
                 </nav>
             </div>
         </header>
-        <div class="header-separator"></div>
+        <!-- Content-->
         <div class="content">
-            <div class="container">
-                <h1>Главная 222</h1>
-                <div class="row">
-                    <div class="col-md-4">4 collumns</div>
-                    <div class="col-md-8">8 collumns</div>
+            <div style="height: 500px; background: pink"></div>
+            <div class="clear50"></div>
+            <!-- Section additional-->
+            <section class="section additional">
+                <div class="container">
+                    <div class="additional__top"></div>
+                    <div class="additional__bottom"></div>
+                    <div class="additional__wrapper">
+                        <div class="additional__title">Дополнительные услуги</div>
+                        <ul class="additional__list">
+                            <li>
+                                <div><i class="icon icon--add-1"></i><span>Перевозка животного</span><strong>300<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-2"></i><span>Перевозка багажа в салоне</span><strong>300<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-3"></i><span>Встреча с табличкой</span><strong>300<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-4"></i><span>Помощь в доставке багажа</span><strong>600<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-5"></i><span>Кузов универсал</span><strong>600<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-6"></i><span>Детское кресло или бустер</span><strong>300<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-7"></i><span>Перевозка лыж/сноуборда<br><small>(за единицу)</small></span><strong>900<i class="icon-rouble"></i></strong></div>
+                            </li>
+                            <li>
+                                <div><i class="icon icon--add-8"></i><span>VIP сопровождение</span><strong>900<i class="icon-rouble"></i></strong></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <!-- Section driver-->
+            <section class="section driver">
+                <div class="container"><img src="./img/driver-img.png" alt="" class="driver__img visible-xs">
+                    <div class="driver__block">
+                        <div class="driver__block__wrapper">
+                            <div class="driver__title">СТАНЬ ВОДИТЕЛЕМ<small>И ПОЛУЧАЙ ДОХОД УЖЕ СЕГОДНЯ</small></div><a href="#!" class="btn btn--register btn--driver"><span>зарегистрироваться</span></a>
+                        </div>
+                    </div><img src="./img/driver-img.png" alt="" class="driver__img hidden-xs">
+                    <div class="driver__figure hidden-sm hidden-xs">
+                        <div></div>
+                        <div><i class="icon icon--taxi"></i></div>
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- Footer-->
         <footer class="footer">
             <div class="container">
-                <div>&copy; 2016</div>
+                <nav role="navigation" class="footer__navigation hidden-xs hidden-sm">
+                    <ul>
+                        <li class="active"><a href="#" title="Главная">Главная</a></li>
+                        <li><a href="#" title="Тариф">Тариф</a></li>
+                        <li><a href="#" title="Для водителей">Для водителей</a></li>
+                        <li><a href="#" title="Контакты">Контакты</a></li>
+                        <li><a href="#" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__copyright">© 2017 dinamika</div>
+                <div class="footer__social"><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a><a href="#!"><i class="icon icon--twitter"></i></a><a href="#!"><i class="icon icon--vk"></i></a></div>
             </div>
         </footer>
-        <div style="height: 1000px; background-color: #000"></div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
         <script src='./js/libs/html5shiv/html5shiv.min.js'>

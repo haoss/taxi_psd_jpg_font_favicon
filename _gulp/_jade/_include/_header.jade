@@ -11,6 +11,15 @@ header.header
     .header__phone
       a(href="callto:") 
         strong +7 (495) 800-80-80
+        
+    .header__menu__background
+      
+    .header__button
+      .header__button__wrapper
+        button#btn-mobile.hamburger(type='button').hamburger--slider.hamburger--header
+          span.hamburger-box
+            span.hamburger-inner
+          strong Меню сайта
     
     nav.header__navigation(role="navigation")
       ul
@@ -22,4 +31,4 @@ header.header
             li
               a(href=val, title=key)= key
 
-.header-separator
+//- .header-separator

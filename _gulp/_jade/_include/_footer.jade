@@ -2,5 +2,25 @@
 footer.footer
   .container
     
-    div &copy; 2016
+    nav.footer__navigation(role="navigation").hidden-xs.hidden-sm
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+              
+    .footer__copyright © 2017 dinamika
+    
+    .footer__social
+      a(href="#!")
+        i.icon.icon--facebook
+      a(href="#!")
+        i.icon.icon--google-plus
+      a(href="#!")
+        i.icon.icon--twitter
+      a(href="#!")
+        i.icon.icon--vk
   

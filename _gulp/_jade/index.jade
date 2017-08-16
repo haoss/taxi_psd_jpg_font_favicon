@@ -14,18 +14,99 @@ html(lang="ru")
     
     include ./_include/_header
     
+    // Content
     .content
-      .container
         
-        h1 Главная 222
+      div(style="height: 500px; background: pink")
         
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
+      .clear50
+      
+      // Section additional
+      section.section.additional
+        .container
+          
+          .additional__top
+          .additional__bottom
+            
+          .additional__wrapper
+            .additional__title Дополнительные услуги
+            
+            ul.additional__list
+              li
+                div
+                  i.icon.icon--add-1
+                  span Перевозка животного
+                  strong 300
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-2
+                  span Перевозка багажа в салоне
+                  strong 300
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-3
+                  span Встреча с табличкой
+                  strong 300
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-4
+                  span Помощь в доставке багажа
+                  strong 600
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-5
+                  span Кузов универсал
+                  strong 600
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-6
+                  span Детское кресло или бустер
+                  strong 300
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-7
+                  span Перевозка лыж/сноуборда
+                    br
+                    small (за единицу)
+                  strong 900
+                    i.icon-rouble
+              li
+                div
+                  i.icon.icon--add-8
+                  span VIP сопровождение
+                  strong 900
+                    i.icon-rouble
+          
+      
+      // Section driver
+      section.section.driver
+        .container
+          
+          img.driver__img(src="./img/driver-img.png", alt="").visible-xs
+          .driver__block
+            .driver__block__wrapper
+              
+              .driver__title СТАНЬ ВОДИТЕЛЕМ
+                small И ПОЛУЧАЙ ДОХОД УЖЕ СЕГОДНЯ
 
+              a(href="#!").btn.btn--register.btn--driver
+                span зарегистрироваться
+              
+          img.driver__img(src="./img/driver-img.png", alt="").hidden-xs
+          
+          .driver__figure.hidden-sm.hidden-xs
+            div
+            div
+              i.icon.icon--taxi
     
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+    //- div(style="height: 1000px; background-color: #000")
     
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>

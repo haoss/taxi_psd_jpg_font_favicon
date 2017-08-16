@@ -4,7 +4,7 @@
   display: inline-block
   padding: 0 15px
   margin-bottom: 0
-  font-size: rem(14)
+  font-size: rem(15)
   font-weight: 400
   text-align: center
   white-space: nowrap
@@ -14,17 +14,36 @@
   user-select: none
   background:
     image: none
-    color: $color-gray
-  border: 1px solid $color-white
-  border-radius: 3px
-  height: 40px
-  line-height: 40px
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+    color: $color-red
+  border: 2px solid $color-white
+  border-radius: 0
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s
+  font-family: $font-intro
+  color: $color-white
+  min-width: 190px
+  transform: skewX(5deg)
+  span
+    display: block
+    height: 35px
+    line-height: 37px
+    transform: skewX(-5deg)
 
   &:hover, &:focus, &:active
     outline: none
+    text-decoration: none
+    background-color: $color-white
+    color: $color-red
 
   &--default
     color: #333
     background-color: $color-white
     border-color: $color-gray
+
+  &--register
+    min-width: 300px
+    transform: skewX(7deg)
+    span
+      transform: skewX(-7deg)
+
+  &--driver
+    margin-left: 71px

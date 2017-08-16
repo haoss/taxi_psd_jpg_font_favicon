@@ -13,11 +13,125 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .header
+    &__phone
+      font-size: rem(26)
+    &__navigation
+      padding-left: 163px
+      padding-right: 243px
+      ul
+        padding-left: 15px
+        li
+          &>a, &>span
+            padding: 0 6px
+  .driver
+    &__block
+      height: 252px
+      width: 414px
+    &__title
+      font-size: rem(32)
+      margin-bottom: 30px
+      small
+        font-size: rem(15)
+    &__img
+      width: 413px
+    &__figure
+      right: 0
+      margin-top: -83px
+      &>div
+        &:first-child
+          height: 99px
+          width: 133px
+        &:last-child
+          height: 50px
+          width: 82px
+          margin-top: -50px
+          margin-left: 85px
+          .icon
+            left: 21px
+            top: 10px
+  .additional
+    &__list
+      li
+        &>div
+          padding-left: 50px
+          padding-right: 50px
+    &__title
+      margin-bottom: 30px
+    &__bottom
+      margin-left: 632px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .header
+    &__navigation
+      display: none
+      z-index: 200
+      width: 290px
+      background: $color-white
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: 65px
+      padding: 0
+      ul
+        display: block
+        padding-left: 0
+        li
+          display: block
+          &>a, &>span
+            display: block
+            height: 46px
+            line-height: 46px
+            text-align: center
+            border-bottom: 1px solid #f4f4f4
+          &>a
+            &:hover
+              background: $color-red
+              color: $color-white
+          &:last-child
+            &>a, &>span
+              border-bottom: 0
+          &.active
+            &>a, &>span
+              background: $color-red
+              color: $color-white
+    &__button
+      display: block
+    &.is-active
+      .header__navigation
+        display: block
+  .footer
+    &__social
+      float: left
+      margin-right: 0
+  .driver
+    padding-top: 75px
+    .container
+      // background: pink
+    &__img
+      float: right
+      margin-right: -60px
+      margin-top: -263px
+    &__block
+      width: 372px
+      margin-left: 15px
+    &__title
+      padding-right: 30px
+  .btn
+    &--driver
+      margin-left: 45px
+  .additional
+    &__list
+      li
+        width: 50%
+    &__bottom
+      margin-left: 375px
+      height: 45px
+    &__top, &__bottom
+      transform: skewX(-15deg)
+    &__wrapper
+      padding-bottom: 60px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -27,9 +141,104 @@
     transform: none !important
     animation: none !important
 
+  .header
+    height: 112px
+    &__button
+      position: absolute
+      bottom: 14px
+      left: 0
+      width: 100%
+      margin: 0
+      transform: skewX(0)
+      &__wrapper
+        transform: skewX(0)
+        text-align: center
+    &__navigation
+      top: 105px
+    &__logo
+      margin-top: 17px
+      img
+        width: 128px
+    &__phone
+      height: 68px
+      line-height: 68px
+  .driver
+    padding-top: 55px
+    &__img
+      float: none
+      margin: 0 auto
+      display: block
+      transform: translateX(45px)
+    &__block
+      margin: -21px auto 0
+      float: none
+  .additional
+    &__list
+      li
+        width: 100%
+        padding: 0
+        &+li
+          margin-top: 5px
+        &>div
+          padding-left: 65px
+          padding-right: 55px
+          height: auto
+          min-height: 43px
+    &__top, &__bottom
+      display: none
+    &__wrapper
+      padding: 30px 0 15px 0
+    &__title
+      text-align: left
+      margin-top: 0
+      margin-bottom: 25px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .header
+    // height: 117px
+    &__logo
+      // margin-top: 18px
+    &__phone
+      height: 73px
+      line-height: 73px
+      font-size: rem(16)
+  .driver
+    &__block
+      transform: skewX(0)
+      width: calc(100% + 30px)
+      margin-left: -15px
+      margin-top: -17px
+      &__wrapper
+        transform: skewX(0)
+    &__title
+      width: 290px
+      text-align: center
+      float: none
+      margin-left: auto
+      margin-right: auto
+      white-space: nowrap
+      padding: 0
+      font-size: rem(29)
+      small
+        font-size: rem(14)
+        margin-top: 16px
+    &__img
+      transform: translateX(0)
+      width: 330px
+      margin: 0 auto
+  .btn
+    &--driver
+      margin: 0 auto
+      display: block
+      max-width: 285px
+      min-width: inherit
+      width: 100%
+  .additional
+    &__title
+      text-align: center
+      line-height: 1.2
+      margin-bottom: 15px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -1,6 +1,6 @@
 /* header */
 .header
-  position: absolute
+  position: relative
   top: 0
   left: 0
   z-index: 1000
@@ -15,10 +15,40 @@
 
   &__logo
     float: left
+    margin-top: 17px
+    position: relative
+    a
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 5
 
   &__phone
     float: right
+    font-size: rem(28)
+    font-family: $font-intro
+    color: $color-red
+    height: 80px
+    line-height: 80px
+    a
+      text-decoration: none
+      color: $color-red
+    strong
+      font-family: $font-intro
 
   &__navigation
     padding-left: 180px
     padding-right: 277px
+
+  &__button
+    display: none
+    width: 180px
+    height: 30px
+    background-color: $color-red
+    margin-left: 206px
+    margin-top: 28px
+    transform: skewX(-17deg)
+    &__wrapper
+      transform: skewX(17deg)

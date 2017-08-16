@@ -6,3 +6,63 @@
     li
         list-style: none
         margin: 0
+
+.header
+  &__navigation
+    font-size: rem(14)
+    font-family: $font-intro
+    ul
+      display: block
+      padding-left: 25px
+      li
+        display: inline-block
+        &>a, &>span
+          color: $primary-color
+          text-transform: uppercase
+          height: 80px
+          line-height: 80px
+          padding: 0 15px
+          display: inline-block
+        &>a
+          &:hover, &:focus
+            color: $color-red
+            text-decoration: none
+        &.active
+          &>a, &>span
+            color: $color-red
+  &__menu
+    &__background
+      display: none
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background: rgba($color-black,0.4)
+      z-index: 50
+
+  &.is-active
+    .header__menu__background
+      display: block
+
+.footer
+  padding-top: 150px
+  &__navigation
+    font-size: rem(14)
+    font-family: $font-intro
+    float: left
+    ul
+      li
+        display: inline-block
+        &>a, &>span
+          display: inline-block
+          color: $color-white
+          text-transform: uppercase
+        &>a
+          &:hover, &:focus
+            text-decoration: none
+            color: $color-red
+        &+li
+          margin-left: 20px
+
+  
