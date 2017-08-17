@@ -10,15 +10,36 @@ html(lang="ru")
   body
     
     // Preloader
-    //- include ./_include/_preloader
+    include ./_include/_preloader
     
     include ./_include/_header
     
     // Content
     .content
-        
-      div(style="height: 500px; background: pink")
-        
+      
+      // Section top
+      section.section.about
+        .container
+          
+          .about__wrapper
+          
+            .about__button
+              a(href="#!")
+                span Вызвать такси
+              a(href="#!")
+                span Стать партнером
+            
+            .about__partners
+              .about__partners__title Являемся партнерами
+              img(src="./img/about-partners.png", alt="")
+              
+            .about__text
+              .about__text__line 
+              span такси
+              strong 
+                span Лучшего качества
+                small по оптимальной стоимости для наших клиентов!
+      
       .clear50
       
       // Section additional
