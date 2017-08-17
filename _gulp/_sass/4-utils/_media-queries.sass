@@ -83,6 +83,11 @@
         bottom: -15px
     &__partners
       bottom: 120px
+  .s-block
+    padding-left: 27px
+    padding-right: 27px
+    &__title
+      left: 10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -181,6 +186,30 @@
         right: inherit
         left: 0
         bottom: 9px
+  .advantages
+    &__block
+      margin-bottom: 25px !important
+    .s-block__wrapper
+      &>.row
+        &:last-child
+          .advantages__block
+            &:last-child
+              margin-bottom: 0 !important
+  .img--document
+    display: block
+    margin: 0 auto
+  .two-button
+    &__wrapper
+      &>a
+        height: 100px
+        width: 296px
+        font-size: rem(25)
+        &::before
+          border-top-width: 100px
+        &:last-child
+          width: 270px
+          &::before
+            border-bottom-width: 100px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -269,6 +298,36 @@
         top: 14px
         small
           font-size: rem(14)
+  .document
+    &__head
+      &__wrapper
+        height: 175px
+  .two-button
+    &__wrapper
+      &>a
+        height: 70px
+        width: 210px
+        font-size: rem(17)
+        &+a
+          margin-left: 15px
+        &::before
+          border-top-width: 70px
+          border-right-width: 14px
+          left: -14px
+        &:last-child
+          width: 190px
+          &::before
+            border-bottom-width: 70px
+            border-left-width: 14px
+            right: -14px
+  .contacts
+    margin-bottom: 20px
+  .btn
+    &--contacts
+      float: none
+      max-width: 195px
+      margin: 20px auto 0
+      display: block
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -346,6 +405,55 @@
           line-height: 1.2
       &>span
         font-size: rem(83)
+  .popup
+    padding: 25px 10px 10px 10px
+    fieldset
+      padding: 30px 20px 20px 20px
+    &__legend
+      font-size: rem(20)
+      padding: 0 10px
+      left: 15px
+      top: -13px
+  .s-block
+    margin-left: -15px
+    margin-right: -15px
+    padding-left: 34px
+    padding-right: 10px
+    &__wrapper
+      overflow: hidden
+    &__title
+      left: 17px
+      top: inherit
+      bottom: 100%
+      transform: translateY(14px)
+    &--contacts
+      margin-top: 30px
+      padding-left: 25px
+      .s-block__wrapper
+        padding-right: 20px
+        padding-left: 7px
+  .form-checkbox--contacts, .form-radio--contacts
+    margin-left: -6px
+  .advantages
+    padding-top: 30px
+  .h1, h1
+    font-size: rem(30)
+  .two-button
+    &__wrapper
+      position: relative
+      +clearfix
+      width: 244px
+      margin: 0 auto
+      height: 152px
+      &>a
+        position: absolute
+        bottom: 0
+        left: 17px
+        &:last-child
+          bottom: inherit
+          top: 0
+          left: inherit
+          right: 17px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

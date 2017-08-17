@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Контакты - Taxi Dinamika</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicons/manifest.json">
+        <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup-call" class="popup mfp-hide">
+            <div class="form">
+                <form action="#!">
+                    <fieldset>
+                        <legend class="popup__legend">Вызвать такси</legend>
+                        <div class="form-group form-group--after has-feedback has-error">
+                            <label class="hidden">ФИО</label>
+                            <input type="text" placeholder="ФИО" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Номер телефона</label>
+                            <input type="text" placeholder="Номер телефона" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Город</label>
+                            <input type="text" placeholder="Город" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Комментарий</label>
+                            <input type="text" placeholder="Комментарий" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox" class="form-checkbox">
+                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных.<br><a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--border w100per"> <span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__logo"><a href="#!"></a><img src="./img/logo.png" alt=""></div>
+                <div class="header__phone"><a href="callto:"> <strong>+7 (495) 800-80-80</strong></a></div>
+                <div class="header__menu__background"></div>
+                <div class="header__button">
+                    <div class="header__button__wrapper">
+                        <button id="btn-mobile" type="button" class="hamburger hamburger--slider hamburger--header"><span class="hamburger-box"><span class="hamburger-inner"></span></span><strong>Меню сайта</strong></button>
+                    </div>
+                </div>
+                <nav role="navigation" class="header__navigation">
+                    <ul>
+                        <li><a href="#" title="Главная">Главная</a></li>
+                        <li><a href="#" title="Тариф">Тариф</a></li>
+                        <li><a href="#" title="Для водителей">Для водителей</a></li>
+                        <li class="active"><a href="#" title="Контакты">Контакты</a></li>
+                        <li><a href="#" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Document head-->
+        <div class="document__head">
+            <div style="background-image: url('./img/document-top-banner2.png')" class="document__head__wrapper">
+                <div class="container">
+                    <h1>Контакты</h1>
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="#!">Главная</a></li>
+                            <li><span>Контакты</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content-->
+        <div class="content">
+            <!-- Content text-->
+            <section class="section">
+                <div class="container">
+                    <!-- Contacts-->
+                    <div class="contacts">
+                        <div class="h3 color--dark">117997, г. Москва, ул. Архитектора Власова, д. 55<br><span style="font-size: 22px;">+7(495) 800-80-80</span></div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p> <strong style="font-size: 15px;">Отдел по работе с корпоративными клиентами</strong></p>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-android-call"></i></td>
+                                        <td>7(495) 500-50-50 доб.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-drafts"></i></td>
+                                        <td><a href="#!">corporate@dinamika.ru</a></td>
+                                    </tr>
+                                </table>
+                                <p><strong style="font-size: 15px;">Отдел по работе с водителями</strong></p>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-android-call"></i></td>
+                                        <td>+7 (495) 500-50-50 доб.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-drafts"></i></td>
+                                        <td><a href="#!">drivers@dinamika.ru</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                <p><strong style="font-size: 15px;">Отдел контроля качества</strong></p>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-android-call"></i></td>
+                                        <td>+7 (495) 500-50-50 доб.1(для клиентов), доб.5 (для водителей)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-drafts"></i></td>
+                                        <td><a href="#!">tqm@dinamika.ru</a></td>
+                                    </tr>
+                                </table>
+                                <div class="contacts__info"><i>ВНИМАНИЕ!!! Претензии по качеству обслуживания принимаются в течение 24 часов с момента события, послужившего основанием претензии</i></div>
+                                <p><strong style="font-size: 15px;">Отдел сотрудничества</strong></p>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-android-drafts"></i></td>
+                                        <td> <a href="#!">cooperate@dinamika.ru</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-drafts"></i></td>
+                                        <td><a href="#!">marketing@dinamika.ru</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map-->
+                    <div id="google" class="map"></div>
+                    <!-- Google Map-->
+                    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+                    <script>
+                        function initialize() {
+                        var myLatlng = new google.maps.LatLng(55.664256,37.5411063);
+                        var map_options = {
+                        zoom: 15,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: myLatlng,
+                        scrollwheel: false,
+                        disableDefaultUI: true
+                        }
+                        var map = new google.maps.Map(document.getElementById('google'), map_options)
+                        var myIcon = new google.maps.MarkerImage('./img/icon-map.png', null, null, null, new google.maps.Size(95,96));
+                        var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        icon: myIcon
+                        });
+                        /* Remove if you dont want B/W Google Map */
+                        /*
+                        var styles = [
+                        {
+                        featureType: "all",
+                        stylers: [
+                        { saturation: -100 }
+                        ]
+                        }
+                        ];
+                        map.setOptions({styles: styles});
+                        */
+                        }
+                        google.maps.event.addDomListener(window, 'load', initialize);
+                    </script>
+                    <!-- Google Map Ends!-->
+                    
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section no--padding">
+                <div class="container">
+                    <!-- Special block-->
+                    <div class="s-block s-block--contacts">
+                        <div class="s-block__title">остались вопросы?</div>
+                        <div class="s-block__wrapper">
+                            <form action="#">
+                                <fieldset class="contacts__fieldset">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback has-error">
+                                                <label class="hidden">Ваше имя</label>
+                                                <input type="text" placeholder="Ваше имя" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Почта</label>
+                                                <input type="text" placeholder="Почта" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Телефон</label>
+                                                <input type="text" placeholder="Телефон" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Ваше сообщение</label>
+                                                <textarea placeholder="Ваше сообщение" class="form-control"></textarea><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <label for="checkbox" class="form-checkbox form-checkbox--contacts">
+                                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button type="submit" class="btn btn--border btn--contacts"><span>Отправить</span></button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <nav role="navigation" class="footer__navigation hidden-xs hidden-sm">
+                    <ul>
+                        <li><a href="#" title="Главная">Главная</a></li>
+                        <li><a href="#" title="Тариф">Тариф</a></li>
+                        <li><a href="#" title="Для водителей">Для водителей</a></li>
+                        <li class="active"><a href="#" title="Контакты">Контакты</a></li>
+                        <li><a href="#" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__copyright">© 2017 dinamika</div>
+                <div class="footer__social"><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a><a href="#!"><i class="icon icon--twitter"></i></a><a href="#!"><i class="icon icon--vk"></i></a></div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Footer js-->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js" async></script>
+        <script src="./js/common.js" async></script>
+    </body>
+</html>

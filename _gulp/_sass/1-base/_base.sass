@@ -37,10 +37,10 @@ body
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
-  color: $color-dark
+  color: $color-red
   font-weight: 400
   text-decoration: none
-  margin: 0 0 15px 0
+  margin: 0 0 10px 0
   font-family: $font-intro
   text-transform: uppercase
   display: block
@@ -59,36 +59,15 @@ body
   letter-spacing: -1px
   margin-bottom: 25px
 
+
 .h2, h2
   font-size: rem(28)
   line-height: 1.14
   margin-bottom: 20px
-  &.line
-    padding-left: 54px
-    position: relative
-    &::before
-      position: absolute
-      left: 0
-      top: 15px
-      height: 1px
-      width: 40px
-      background-color: $color-dark
-      content: ''
 
 .h3, h3
-  font-size: rem(22)
+  font-size: rem(18)
   line-height: 1.38
-  &.line
-    padding-left: 50px
-    position: relative
-    &::before
-      position: absolute
-      left: 0
-      top: 14px
-      height: 1px
-      width: 40px
-      background-color: $color-dark
-      content: ''
 
 .h4, h4
   font-size: rem(20)
@@ -105,7 +84,7 @@ body
   line-height: 1.2
 
 p
-  margin: 0 0 10px 0
+  margin: 0 0 15px 0
   line-height: 1.7
   &+h2, &+.h2, &+h3, &+.h3, &+h4, &+.h4, &+h5, &+.h5, &+h6, &+.h6
     margin-top: 20px
@@ -337,6 +316,10 @@ ol li
     color: $color-gray !important
   &--white
     color: $color-white !important
+  &--black
+    color: $color-black !important
+  &--dark
+    color: $color-dark !important
 
 /*!
  * Hamburgers

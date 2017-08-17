@@ -34,6 +34,37 @@
         <div class="loader">
             <div class="loader__block"></div>
         </div>
+        <div id="popup-call" class="popup mfp-hide">
+            <div class="form">
+                <form action="#!">
+                    <fieldset>
+                        <legend class="popup__legend">Вызвать такси</legend>
+                        <div class="form-group form-group--after has-feedback has-error">
+                            <label class="hidden">ФИО</label>
+                            <input type="text" placeholder="ФИО" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Номер телефона</label>
+                            <input type="text" placeholder="Номер телефона" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Город</label>
+                            <input type="text" placeholder="Город" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Комментарий</label>
+                            <input type="text" placeholder="Комментарий" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox" class="form-checkbox">
+                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных.<br><a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--border w100per"> <span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="container">
@@ -62,7 +93,7 @@
             <section class="section about">
                 <div class="container">
                     <div class="about__wrapper">
-                        <div class="about__button"><a href="#!"><span>Вызвать такси</span></a><a href="#!"><span>Стать партнером</span></a></div>
+                        <div class="about__button"><a href="#popup-call" class="open-popup-link"><span>Вызвать такси</span></a><a href="#!"><span>Стать партнером</span></a></div>
                         <div class="about__partners">
                             <div class="about__partners__title">Являемся партнерами</div><img src="./img/about-partners.png" alt="">
                         </div>

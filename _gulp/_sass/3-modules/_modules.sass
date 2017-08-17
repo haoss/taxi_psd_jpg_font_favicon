@@ -64,18 +64,20 @@ div.table
     display: table-cell
     vertical-align: top
     &+div
-      padding-left: 30px
+      padding-left: 15px
 
 // Table
 table.table
   margin-bottom: 15px
   td
-    padding: 5px 0
+    padding: 3px 0
     p
       &:last-child
         margin-bottom: 0
     &+td
       padding-left: 15px
+    [class*="ion-"]
+      color: $color-red
 
 .visible-xxs-inline-block
   display: none !important
@@ -353,3 +355,232 @@ table.table
         font-size: rem(21)
         color: #535353
         margin-top: 14px
+
+// Popup
+.popup
+  position: relative
+  background: $color-white
+  padding: 36px 17px 30px 18px
+  width: auto
+  max-width: 426px
+  margin: 30px auto
+  border: 0
+  &__legend
+    border: 0
+    display: block
+    font-family: $font-intro
+    color: $color-red
+    text-transform: uppercase
+    font-size: rem(30)
+    line-height: 1
+    position: absolute
+    left: 17px
+    top: -18px
+    padding: 0 15px
+    background: $color-white
+    margin: 0
+    width: auto
+
+  fieldset
+    border: 4px solid $color-red
+    padding: 40px 40px 30px 40px
+    position: relative
+
+.mfp-close-btn-in .mfp-close
+  color: $color-white
+  opacity: 1
+  margin-top: -38px
+  right: -15px
+
+/* s-block */
+.s-block
+  position: relative
+  border: 4px solid $color-yellow
+  padding: 42px 32px 25px 32px
+  margin-bottom: 40px
+  &--contacts
+    margin-bottom: 0
+  &__title
+    position: absolute
+    top: -16px
+    left: 16px
+    font-size: rem(30)
+    text-transform: uppercase
+    color: $color-yellow
+    font-family: $font-intro
+    line-height: 1
+    padding: 0 16px
+    background: $color-white
+
+  &__wrapper
+    min-height: 200px
+
+/* advantages */
+.advantages
+  padding-top: 0
+  padding-bottom: 0
+  font-size: rem(12)
+  &__block
+    p
+      &:last-child
+        margin-bottom: 0
+    margin-bottom: 35px
+
+  .s-block__wrapper
+    &>.row
+      &:last-child
+        .advantages__block
+          margin-bottom: 0
+
+ul.list
+  padding: 0
+  margin: 0 0 15px 0
+  li
+    list-style: none
+    position: relative
+    padding-left: 21px
+    min-height: 17px
+    line-height: 1.55
+    &::before
+      content: ''
+      width: 8px
+      height: 2px
+      background: $color-red
+      left: 2px
+      top: 11px
+      position: absolute
+
+.document
+  &__head
+    display: table
+    width: 100%
+    background: #4f4f4f
+    &__wrapper
+      display: table-cell
+      text-align: center
+      height: 320px
+      vertical-align: middle
+      background:
+        position: top center
+        repeat: no-repeat
+        size: cover
+
+    .h1, h1
+      color: $color-white
+      text-shadow: 0 3px 6px rgba($color-black,.15)
+      padding-bottom: 13px
+      margin-bottom: 10px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 80px
+        height: 2px
+        background-color: $color-white
+        left: 50%
+        transform: translateX(-50%) skewX(-70deg)
+
+.breadcrumbs
+  text-align: center
+  font-size: rem(11)
+  color: $color-white
+  text-shadow: 0 3px 6px rgba($color-black,.15)
+  ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    +clearfix
+    li
+      list-style: none
+      margin: 0
+      float: left
+      &+li
+        &::before
+          content: '/'
+          display: inline-block
+          margin: 0 5px
+      a, span
+        color: $color-white
+        text-decoration: none
+      a
+        &:hover
+          color: $color-red
+          text-decoration: none
+
+.two-button
+  &__wrapper
+    text-align: center
+    &>a
+      display: inline-block
+      height: 120px
+      background: $color-red
+      width: 352px
+      font-size: rem(30)
+      text-transform: uppercase
+      font-family: $font-intro
+      color: $color-white
+      position: relative
+      &+a
+        margin-left: 30px
+      &::before
+        position: absolute
+        left: -23px
+        height: 0
+        width: 0
+        border-top: 120px solid transparent
+        border-right: 23px solid $color-red
+        content: ''
+        transition: border-color 0.35s
+      &:hover, &:focus
+        text-decoration: none
+        color: $color-white
+        background-color: $color-yellow
+        &::before
+          border-right-color: $color-yellow
+      span
+        position: absolute
+        bottom: 13px
+        right: 23px
+        display: block
+        line-height: 1
+        white-space: nowrap
+      &:last-child
+        width: 325px
+        &::before
+          left: inherit
+          right: -23px
+          border-top: 0
+          border-bottom: 120px solid transparent
+          border-right: 0
+          border-left: 23px solid $color-red
+        &:hover, &:focus
+          &::before
+            border-left-color: $color-yellow
+        span
+          right: inherit
+          left: 23px
+
+.map
+  position: relative
+  height: 0
+  padding-bottom: 460px
+  border: 4px solid $color-lightgray
+  background: $color-lightgray
+  iframe
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+
+.contacts
+  font-size: 13px
+  margin-bottom: 40px
+  &__info
+    font-size: rem(12)
+    background: $color-lightgray
+    padding: 5px 10px 5px 25px
+    margin-bottom: 16px
+  &__fieldset
+    max-width: 1002px

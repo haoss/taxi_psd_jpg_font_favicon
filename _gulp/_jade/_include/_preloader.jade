@@ -1,2 +1,35 @@
 .loader
   .loader__block
+
+#popup-call.popup.mfp-hide
+  .form
+    form(action="#!")
+      fieldset
+        legend.popup__legend Вызвать такси
+        .form-group.form-group--after.has-feedback.has-error
+          label.hidden ФИО
+          input(type="text" placeholder="ФИО").form-control
+          i.ion-alert-circled.form-control__feedback
+            
+        .form-group.form-group--after
+          label.hidden Номер телефона
+          input(type="text" placeholder="Номер телефона").form-control
+          
+        .form-group.form-group--after
+          label.hidden Город
+          input(type="text" placeholder="Город").form-control
+          
+        .form-group.form-group--after
+          label.hidden Комментарий
+          input(type="text" placeholder="Комментарий").form-control
+            
+        .form-group
+          label.form-checkbox(for="checkbox")
+            input#checkbox(type="checkbox" checked).form-checkbox__input
+            span.form-checkbox__span
+            span.form-checkbox__label Согласен на обработку личных данных.
+              br
+              a(href="#!" target="_blank") Политика конфиденциальности
+            
+        button(type="submit").btn.btn--border.w100per 
+          span Отправить

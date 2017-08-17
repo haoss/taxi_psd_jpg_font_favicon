@@ -1,0 +1,146 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'О компании' //активный пункт меню, список в header.jade
+  -var pageTitle = 'О компании' + ' - Taxi Dinamika' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Document head
+    .document__head
+      .document__head__wrapper(style="background-image: url('./img/document-top-banner.png')")
+        
+        .container
+          h1 о компании
+          
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Главная
+              li
+                span О компании
+    
+    // Content
+    .content
+      
+      // Content text
+      section.section
+        .container
+          
+          .row
+            .col-md-6
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+              p Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+              p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его 
+            .col-md-6
+              img(src="./img/about.png", alt="").img-responsive.img--document
+      
+      // Section advantages
+      section.section.advantages
+        .container
+          
+          // Special block
+          .s-block
+            .s-block__title Наши преимущества
+            .s-block__wrapper
+              
+              .row
+                .col-md-6
+                  .advantages__block
+                    .h3 ПРОФЕССИОНАЛЬНЫЕ ВОДИТЕЛИ
+                    p Водители имеют безаварийный стаж вождения от 4-х лет, проходят учебный курс, включающий в себя правила обслуживания пассажиров. При малейшем нарушении качества и уровня обслуживания, провинившийся водитель автоматически отключается от системы.
+                    
+                .col-md-6.hidden-xs.hidden-sm
+                  .advantages__block
+                    .h3 РАЗЛИЧНЫЕ ВАРИАНТЫ ДЛЯ ЗАКАЗА ТАКСИ
+                    ul.list
+                      li мобильное приложение;
+                      li сайт;
+                      li звонок в контакт-центр по номеру 800-80-80
+                      li услуга «Вызвать такси»
+                    
+              .row
+                .col-md-6
+                  .advantages__block
+                    .h3 24/7 КОНТРОЛЬ КАЧЕСТВА
+                    p Специализированный отдел компании, который принимает обращения с отзывами от пассажиров и предоставляет квалифицированную помощь по любому вопросу в самые короткие сроки.
+                    
+                .col-md-6.hidden-xs.hidden-sm
+                  .advantages__block
+                    .h3 РАЗЛИЧНЫЕ СПОСОБЫ ОПЛАТЫ
+                    ul.list
+                      li наличными деньгами
+                      li банковской картой
+                      li накопленными бонусами
+      
+              .row
+                .col-md-6
+                  .advantages__block
+                    .h3 СКОРОСТЬ
+                    p Самая быстрая подача автомобиля в черте города и прилегающих территориях - всего за 7-10 минут.
+                    
+                .col-md-6.hidden-xs.hidden-sm
+                  .advantages__block
+                    .h3 ОБСЛУЖИВАНИЕ ЮРИДИЧЕСКИХ ЛИЦ
+                    ul.list
+                      li безналичная форма оплаты
+                      li постоянный контроль качества водителей
+                      li полный контроль маршрутов поездок и их стоимости
+                      li отсутствие необходимости содержать собственный автопарк
+              
+              .row.visible-xs.visible-sm
+                .col-md-12
+                  .advantages__block
+                    .h3 РАЗЛИЧНЫЕ ВАРИАНТЫ ДЛЯ ЗАКАЗА ТАКСИ
+                    ul.list
+                      li мобильное приложение;
+                      li сайт;
+                      li звонок в контакт-центр по номеру 800-80-80
+                      li услуга «Вызвать такси»
+                
+                  .advantages__block
+                    .h3 РАЗЛИЧНЫЕ СПОСОБЫ ОПЛАТЫ
+                    ul.list
+                      li наличными деньгами
+                      li банковской картой
+                      li накопленными бонусами
+                      
+                  .advantages__block
+                    .h3 ОБСЛУЖИВАНИЕ ЮРИДИЧЕСКИХ ЛИЦ
+                    ul.list
+                      li безналичная форма оплаты
+                      li постоянный контроль качества водителей
+                      li полный контроль маршрутов поездок и их стоимости
+                      li отсутствие необходимости содержать собственный автопарк
+      
+          // Two button
+          .two-button
+            .two-button__wrapper
+              a(href="#!")
+                span Стать партнером
+              a(href="#popup-call").open-popup-link
+                span Вызвать такси
+              
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    include ./_include/_footer-js
+    // Load Scripts
+    script(src="./js/libs.js" async)
+    script(src="./js/common.js" async)
+    include ./_include/_js-body-bottom
