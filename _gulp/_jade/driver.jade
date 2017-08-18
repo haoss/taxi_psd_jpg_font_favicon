@@ -1,0 +1,205 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Для водителей' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Для водителей' + ' - Taxi Dinamika' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Document head
+    .document__head
+      .document__head__wrapper(style="background-image: url('./img/document-top-banner3.png')")
+        
+        .container
+          h1 Для водителей
+          
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Главная
+              li
+                span Для водителей
+    
+    // Content
+    .content
+      
+      // Content text
+      section.section
+        .container
+          
+          .row
+            .col-md-6
+              p Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+            .col-md-6
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+      
+      section.section.connect
+        .container
+          
+          // Special block
+          .s-block.s-block--connect.no--margin-top.no--margin-bottom
+            .s-block__title КАК ПОДКЛЮЧИТЬСЯ?
+            .s-block__wrapper
+              
+              .row
+                .col-sm-6
+                  
+                  table.table.table--connect
+                    tr
+                      td(valign="top")
+                        i.icon.icon--services-img-1
+                      td(valign="top")
+                        .h5.color--dark Заполнить онлайн заявку
+                    tr
+                      td(valign="top")
+                        i.icon.icon--services-img-2
+                      td(valign="top")
+                        .h5.color--dark Заключить договор оказания информационных услуг
+                    tr
+                      td(valign="top")
+                        i.icon.icon--services-img-3
+                      td(valign="top")
+                        .h5.color--dark Сдать тест на знание города и пройти краткое обучение в офисе
+                    tr
+                      td(valign="top")
+                        i.icon.icon--services-img-4
+                      td(valign="top")
+                        .h5.color--dark Скачать приложение «водитель» и принимать заказы
+                  
+                .col-sm-6
+                  p 
+                    strong Для заключения договора 
+                    | необходимо приехать в офис организации по адресу 
+                    strong ул. Первая деловая д. 1. 
+                    | Прием водителей осуществляется по рабочим дням, 
+                    strong строго в 13:00. 
+                  
+                  .clear10
+                  
+                  p.no--margin(style="font-size: 12px;")
+                    strong При себе необходимо иметь:
+                  ul.list.list--small
+                    li общегражданский паспорт РФ
+                    li водительское удостоверение
+                    li свидетельство о регистрации ТС (техпаспорт)
+                    li разрешение на осуществление деятельности такси
+                    li водитель является собственником ТС — свидетельство ИП, свидетельство ИНН
+                    li водитель состоит в трудовых отношениях с лицом, получившим разрешение — трудовой договор
+                    li водитель арендует ТС у другого лица — свидетельство ИП, свидетельство ИНН, договор аренды
+                    
+      
+      // Section
+      section.section.services.no--padding
+        .container
+          .row
+            .col-md-4
+              .h3 Условия сотрудничества
+              ul.list.list--small
+                li для работы в системе Ситимобил необходимо иметь коммуникатор любой марки и модели с GPS модулем и с операционной системой Android версия 4.1 и выше.
+                li стоимость услуг диспетчерской - от 7% от окончательной стоимости заказа
+                li свободный график для водителя такси
+                li самостоятельный выбор заказов для исполнения
+                li автоматизированные расчеты
+                li пополнение кошелька из аппаратов, не приезжая в офис
+                li работа с заказами из мобильного телефона
+                li действительно честные и равные условия для ВСЕХ водителей
+                li страхование от несчастных случаев
+                
+            .col-md-4
+              .h3 Требования к водителю
+              ul.list.list--small
+                li индивидуальные предприниматели‚ имеющие РАЗРЕШЕНИЕ на осуществление деятельности по перевозке пассажиров / наличие трудового договора с арендодателем
+                li минимальный возраст - 23 года
+                li минимальный стаж вождения - 3 года
+                li гражданство РФ ( паспорт РФ /вид на жительство)
+                li водительское удостоверение РФ
+                
+            .col-md-4
+              .h3 Требования к машине
+              ul.list.list--small
+                li иномарка класса комфорт‚ бизнес и VIP в хорошем состоянии не старше 5 лет. Иномарка эконом класса не старше 3-х лет
+                li левый руль, российские номера
+                li наличие ОСАГО
+      
+      section.section
+        .container
+          
+          // Special block
+          .s-block.s-block--mobile
+            .s-block__title заполнить заявку
+            .s-block__wrapper
+              
+              form(action="#")
+                fieldset.contacts__fieldset
+                  .row
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback.has-error
+                        label.hidden Ваше имя
+                        input(type="text" placeholder="Ваше имя").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback
+                        label.hidden Телефон
+                        input(type="text" placeholder="Телефон").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback
+                        label.hidden Город
+                        input(type="text" placeholder="Город").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                  .row
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback
+                        label.hidden Марка машины
+                        input(type="text" placeholder="Марка машины").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback
+                        label.hidden № водительского удостоверения
+                        input(type="text" placeholder="№ водительского удостоверения").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                    .col-sm-4
+                      .form-group.form-group--after.has-feedback
+                        label.hidden Комментарий
+                        input(type="text" placeholder="Комментарий").form-control
+                        i.ion-alert-circled.form-control__feedback
+                          
+                  .row
+                    .col-sm-8
+                      label.form-checkbox(for="checkbox").form-checkbox--contacts
+                        input#checkbox(type="checkbox" checked).form-checkbox__input
+                        span.form-checkbox__span
+                        span.form-checkbox__label Согласен на обработку личных данных. 
+                          a(href="#!" target="_blank") Политика конфиденциальности
+                    .col-sm-4
+                      button(type="submit").btn.btn--border.btn--contacts
+                        span Отправить
+
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    include ./_include/_footer-js
+    // Load Scripts
+    script(src="./js/libs.js" async)
+    script(src="./js/common.js" async)
+    include ./_include/_js-body-bottom

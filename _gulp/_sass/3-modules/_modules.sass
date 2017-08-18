@@ -78,6 +78,15 @@ table.table
       padding-left: 15px
     [class*="ion-"]
       color: $color-red
+  &--connect
+    max-width: 455px
+    td
+      padding-top: 0
+      padding-bottom: 15px
+    tr
+      &:last-child
+        td
+          padding-bottom: 0
 
 .visible-xxs-inline-block
   display: none !important
@@ -413,7 +422,7 @@ table.table
     background: $color-white
 
   &__wrapper
-    min-height: 200px
+    min-height: 100px
 
 /* advantages */
 .advantages
@@ -432,23 +441,29 @@ table.table
         .advantages__block
           margin-bottom: 0
 
-ul.list
-  padding: 0
-  margin: 0 0 15px 0
-  li
-    list-style: none
-    position: relative
-    padding-left: 21px
-    min-height: 17px
-    line-height: 1.55
-    &::before
-      content: ''
-      width: 8px
-      height: 2px
-      background: $color-red
-      left: 2px
-      top: 11px
-      position: absolute
+ul
+  &.list
+    padding: 0
+    margin: 0 0 15px 0
+    li
+      list-style: none
+      position: relative
+      padding-left: 21px
+      min-height: 17px
+      line-height: 1.55
+      &::before
+        content: ''
+        width: 8px
+        height: 2px
+        background: $color-red
+        left: 2px
+        top: 11px
+        position: absolute
+    &--small
+      font-size: rem(12)
+      li
+        &::before
+          top: 9px
 
 .document
   &__head
