@@ -3722,14 +3722,14 @@ body {
   line-height: 1.38; }
 
 .h4, h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.38; }
 
 .h5, h5 {
-  font-size: 1.125rem; }
+  font-size: 0.875rem; }
 
 .h6, h6 {
-  font-size: 1rem; }
+  font-size: 0.75rem; }
 
 .small, small {
   font-size: 0.75rem;
@@ -3930,22 +3930,22 @@ ol li {
   display: inline-block; }
   .icon--facebook {
     background-image: url(../img/sprite.png);
-    background-position: 0px -24px;
+    background-position: 0px 0px;
     width: 23px;
     height: 24px; }
   .icon--google-plus {
     background-image: url(../img/sprite.png);
-    background-position: 0px -48px;
+    background-position: 0px -24px;
     width: 23px;
     height: 24px; }
   .icon--twitter {
     background-image: url(../img/sprite.png);
-    background-position: 0px -72px;
+    background-position: 0px -48px;
     width: 23px;
     height: 24px; }
   .icon--vk {
     background-image: url(../img/sprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -72px;
     width: 24px;
     height: 24px; }
   .icon--taxi {
@@ -3955,27 +3955,27 @@ ol li {
     height: 33px; }
   .icon--add-1 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -258px;
+    background-position: 0px -301px;
     width: 43px;
     height: 43px; }
   .icon--add-2 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -172px;
+    background-position: 0px -258px;
     width: 43px;
     height: 43px; }
   .icon--add-3 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -301px;
+    background-position: 0px -344px;
     width: 43px;
     height: 43px; }
   .icon--add-4 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -344px;
+    background-position: 0px -387px;
     width: 43px;
     height: 43px; }
   .icon--add-5 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -387px;
+    background-position: 0px -430px;
     width: 43px;
     height: 43px; }
   .icon--add-6 {
@@ -3985,13 +3985,33 @@ ol li {
     height: 43px; }
   .icon--add-7 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -430px;
+    background-position: 0px -172px;
     width: 43px;
     height: 43px; }
   .icon--add-8 {
     background-image: url(../img/sprite.png);
     background-position: 0px -215px;
     width: 43px;
+    height: 43px; }
+  .icon--services-img-1 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -473px;
+    width: 52px;
+    height: 43px; }
+  .icon--services-img-2 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -516px;
+    width: 52px;
+    height: 43px; }
+  .icon--services-img-3 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -559px;
+    width: 52px;
+    height: 43px; }
+  .icon--services-img-4 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -602px;
+    width: 53px;
     height: 43px; }
 
 .content {
@@ -4016,7 +4036,7 @@ ol li {
   color: #000000 !important; }
 
 .color--dark {
-  color: #2e2f33 !important; }
+  color: #444444 !important; }
 
 /*!
  * Hamburgers
@@ -5538,6 +5558,13 @@ table.table {
       padding-left: 15px; }
     table.table td [class*="ion-"] {
       color: #f6582d; }
+  table.table--connect {
+    max-width: 455px; }
+    table.table--connect td {
+      padding-top: 0;
+      padding-bottom: 15px; }
+    table.table--connect tr:last-child td {
+      padding-bottom: 0; }
 
 .visible-xxs-inline-block {
   display: none !important; }
@@ -5864,7 +5891,7 @@ table.table {
     padding: 0 16px;
     background: #ffffff; }
   .s-block__wrapper {
-    min-height: 200px; }
+    min-height: 100px; }
 
 /* advantages */
 .advantages {
@@ -5895,6 +5922,10 @@ ul.list {
       left: 2px;
       top: 11px;
       position: absolute; }
+  ul.list--small {
+    font-size: 0.75rem; }
+    ul.list--small li::before {
+      top: 9px; }
 
 .document__head {
   display: table;
@@ -6743,12 +6774,14 @@ ul.list {
       bottom: 100%;
       -webkit-transform: translateY(14px);
               transform: translateY(14px); }
-    .s-block--contacts {
+    .s-block--contacts, .s-block--mobile {
       margin-top: 30px;
       padding-left: 25px; }
-      .s-block--contacts .s-block__wrapper {
+      .s-block--contacts .s-block__wrapper, .s-block--mobile .s-block__wrapper {
         padding-right: 20px;
         padding-left: 7px; }
+    .s-block--connect .s-block__title {
+      font-size: 1.6875rem; }
   .form-checkbox--contacts, .form-radio--contacts {
     margin-left: -6px; }
   .advantages {

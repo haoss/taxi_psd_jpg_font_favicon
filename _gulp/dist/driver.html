@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Для водителей - Taxi Dinamika</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicons/manifest.json">
+        <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup-call" class="popup mfp-hide">
+            <div class="form">
+                <form action="#!">
+                    <fieldset>
+                        <legend class="popup__legend">Вызвать такси</legend>
+                        <div class="form-group form-group--after has-feedback has-error">
+                            <label class="hidden">ФИО</label>
+                            <input type="text" placeholder="ФИО" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Номер телефона</label>
+                            <input type="text" placeholder="Номер телефона" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Город</label>
+                            <input type="text" placeholder="Город" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Комментарий</label>
+                            <input type="text" placeholder="Комментарий" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox" class="form-checkbox">
+                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных.<br><a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--border w100per"> <span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__logo"><a href="index.html"></a><img src="./img/logo.png" alt=""></div>
+                <div class="header__phone"><a href="callto:"> <strong>+7 (495) 800-80-80</strong></a></div>
+                <div class="header__menu__background"></div>
+                <div class="header__button">
+                    <div class="header__button__wrapper">
+                        <button id="btn-mobile" type="button" class="hamburger hamburger--slider hamburger--header"><span class="hamburger-box"><span class="hamburger-inner"></span></span><strong>Меню сайта</strong></button>
+                    </div>
+                </div>
+                <nav role="navigation" class="header__navigation">
+                    <ul>
+                        <li><a href="index.html" title="Главная">Главная</a></li>
+                        <li><a href="tarif.html" title="Тариф">Тариф</a></li>
+                        <li class="active"><a href="driver.html" title="Для водителей">Для водителей</a></li>
+                        <li><a href="contact.html" title="Контакты">Контакты</a></li>
+                        <li><a href="about.html" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Document head-->
+        <div class="document__head">
+            <div style="background-image: url('./img/document-top-banner3.png')" class="document__head__wrapper">
+                <div class="container">
+                    <h1>Для водителей</h1>
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="#!">Главная</a></li>
+                            <li><span>Для водителей</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content-->
+        <div class="content">
+            <!-- Content text-->
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section connect">
+                <div class="container">
+                    <!-- Special block-->
+                    <div class="s-block s-block--connect no--margin-top no--margin-bottom">
+                        <div class="s-block__title">КАК ПОДКЛЮЧИТЬСЯ?</div>
+                        <div class="s-block__wrapper">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <table class="table table--connect">
+                                        <tr>
+                                            <td valign="top"><i class="icon icon--services-img-1"></i></td>
+                                            <td valign="top">
+                                                <div class="h5 color--dark">Заполнить онлайн заявку</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"><i class="icon icon--services-img-2"></i></td>
+                                            <td valign="top">
+                                                <div class="h5 color--dark">Заключить договор оказания информационных услуг</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"><i class="icon icon--services-img-3"></i></td>
+                                            <td valign="top">
+                                                <div class="h5 color--dark">Сдать тест на знание города и пройти краткое обучение в офисе</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"><i class="icon icon--services-img-4"></i></td>
+                                            <td valign="top">
+                                                <div class="h5 color--dark">Скачать приложение «водитель» и принимать заказы</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p> <strong>Для заключения договора </strong>необходимо приехать в офис организации по адресу <strong>ул. Первая деловая д. 1. </strong>Прием водителей осуществляется по рабочим дням, <strong>строго в 13:00. </strong></p>
+                                    <div class="clear10"></div>
+                                    <p style="font-size: 12px;" class="no--margin"><strong>При себе необходимо иметь:</strong></p>
+                                    <ul class="list list--small">
+                                        <li>общегражданский паспорт РФ</li>
+                                        <li>водительское удостоверение</li>
+                                        <li>свидетельство о регистрации ТС (техпаспорт)</li>
+                                        <li>разрешение на осуществление деятельности такси</li>
+                                        <li>водитель является собственником ТС — свидетельство ИП, свидетельство ИНН</li>
+                                        <li>водитель состоит в трудовых отношениях с лицом, получившим разрешение — трудовой договор</li>
+                                        <li>водитель арендует ТС у другого лица — свидетельство ИП, свидетельство ИНН, договор аренды</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section services no--padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="h3">Условия сотрудничества</div>
+                            <ul class="list list--small">
+                                <li>для работы в системе Ситимобил необходимо иметь коммуникатор любой марки и модели с GPS модулем и с операционной системой Android версия 4.1 и выше.</li>
+                                <li>стоимость услуг диспетчерской - от 7% от окончательной стоимости заказа</li>
+                                <li>свободный график для водителя такси</li>
+                                <li>самостоятельный выбор заказов для исполнения</li>
+                                <li>автоматизированные расчеты</li>
+                                <li>пополнение кошелька из аппаратов, не приезжая в офис</li>
+                                <li>работа с заказами из мобильного телефона</li>
+                                <li>действительно честные и равные условия для ВСЕХ водителей</li>
+                                <li>страхование от несчастных случаев</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h3">Требования к водителю</div>
+                            <ul class="list list--small">
+                                <li>индивидуальные предприниматели‚ имеющие РАЗРЕШЕНИЕ на осуществление деятельности по перевозке пассажиров / наличие трудового договора с арендодателем</li>
+                                <li>минимальный возраст - 23 года</li>
+                                <li>минимальный стаж вождения - 3 года</li>
+                                <li>гражданство РФ ( паспорт РФ /вид на жительство)</li>
+                                <li>водительское удостоверение РФ</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h3">Требования к машине</div>
+                            <ul class="list list--small">
+                                <li>иномарка класса комфорт‚ бизнес и VIP в хорошем состоянии не старше 5 лет. Иномарка эконом класса не старше 3-х лет</li>
+                                <li>левый руль, российские номера</li>
+                                <li>наличие ОСАГО</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <!-- Special block-->
+                    <div class="s-block s-block--mobile">
+                        <div class="s-block__title">заполнить заявку</div>
+                        <div class="s-block__wrapper">
+                            <form action="#">
+                                <fieldset class="contacts__fieldset">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback has-error">
+                                                <label class="hidden">Ваше имя</label>
+                                                <input type="text" placeholder="Ваше имя" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Телефон</label>
+                                                <input type="text" placeholder="Телефон" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Город</label>
+                                                <input type="text" placeholder="Город" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Марка машины</label>
+                                                <input type="text" placeholder="Марка машины" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">№ водительского удостоверения</label>
+                                                <input type="text" placeholder="№ водительского удостоверения" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group form-group--after has-feedback">
+                                                <label class="hidden">Комментарий</label>
+                                                <input type="text" placeholder="Комментарий" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <label for="checkbox" class="form-checkbox form-checkbox--contacts">
+                                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button type="submit" class="btn btn--border btn--contacts"><span>Отправить</span></button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <nav role="navigation" class="footer__navigation hidden-xs hidden-sm">
+                    <ul>
+                        <li><a href="index.html" title="Главная">Главная</a></li>
+                        <li><a href="tarif.html" title="Тариф">Тариф</a></li>
+                        <li class="active"><a href="driver.html" title="Для водителей">Для водителей</a></li>
+                        <li><a href="contact.html" title="Контакты">Контакты</a></li>
+                        <li><a href="about.html" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__copyright">© 2017 dinamika</div>
+                <div class="footer__social"><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a><a href="#!"><i class="icon icon--twitter"></i></a><a href="#!"><i class="icon icon--vk"></i></a></div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Footer js-->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js" async></script>
+        <script src="./js/common.js" async></script>
+    </body>
+</html>
