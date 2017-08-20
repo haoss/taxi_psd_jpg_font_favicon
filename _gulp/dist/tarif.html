@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Тарифы - Taxi Dinamika</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicons/manifest.json">
+        <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./font/fontello/css/fontello.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup-call" class="popup mfp-hide">
+            <div class="form">
+                <form action="#!">
+                    <fieldset>
+                        <legend class="popup__legend">Вызвать такси</legend>
+                        <div class="form-group form-group--after has-feedback has-error">
+                            <label class="hidden">ФИО</label>
+                            <input type="text" placeholder="ФИО" class="form-control"><i class="ion-alert-circled form-control__feedback"></i>
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Номер телефона</label>
+                            <input type="text" placeholder="Номер телефона" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Город</label>
+                            <input type="text" placeholder="Город" class="form-control">
+                        </div>
+                        <div class="form-group form-group--after">
+                            <label class="hidden">Комментарий</label>
+                            <input type="text" placeholder="Комментарий" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox" class="form-checkbox">
+                                <input id="checkbox" type="checkbox" checked class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку личных данных.<br><a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--border w100per"> <span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__logo"><a href="index.html"></a><img src="./img/logo.png" alt=""></div>
+                <div class="header__phone"><a href="callto:"> <strong>+7 (495) 800-80-80</strong></a></div>
+                <div class="header__menu__background"></div>
+                <div class="header__button">
+                    <div class="header__button__wrapper">
+                        <button id="btn-mobile" type="button" class="hamburger hamburger--slider hamburger--header"><span class="hamburger-box"><span class="hamburger-inner"></span></span><strong>Меню сайта</strong></button>
+                    </div>
+                </div>
+                <nav role="navigation" class="header__navigation">
+                    <ul>
+                        <li><a href="index.html" title="Главная">Главная</a></li>
+                        <li class="active"><a href="tarif.html" title="Тариф">Тариф</a></li>
+                        <li><a href="driver.html" title="Для водителей">Для водителей</a></li>
+                        <li><a href="contact.html" title="Контакты">Контакты</a></li>
+                        <li><a href="about.html" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Document head-->
+        <div class="document__head">
+            <div style="background-image: url('./img/document-top-banner4.png')" class="document__head__wrapper">
+                <div class="container">
+                    <h1>Тарифы</h1>
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="#!">Главная</a></li>
+                            <li><span>Тарифы</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content-->
+        <div class="content">
+            <!-- Content text-->
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tarif-->
+            <section class="section tarif no--padding">
+                <div class="container">
+                    <!-- Nav tabs-->
+                    <div class="tarif__navigation">
+                        <div class="tarif__menu__background"></div>
+                        <div class="tarif__button">
+                            <div class="tarif__button__wrapper">
+                                <p>Выберите класс автомобиля</p>
+                                <button id="btn-mobile-tarif"><strong> <span>Стандарт</span><i class="ion-arrow-down-b"></i></strong></button>
+                            </div>
+                        </div>
+                        <ul role="tablist" class="tarif__tab">
+                            <li role="presentation" class="active"><a href="#tarif1" aria-controls="tarif1" role="tab" data-toggle="tab"> <span>Стандарт</span></a></li>
+                            <li role="presentation"><a href="#tarif2" aria-controls="tarif2" role="tab" data-toggle="tab"> <span>Комфорт</span></a></li>
+                            <li role="presentation"><a href="#tarif3" aria-controls="tarif3" role="tab" data-toggle="tab"> <span>Бизнес</span></a></li>
+                            <li role="presentation"><a href="#tarif4" aria-controls="tarif4" role="tab" data-toggle="tab"> <span>VIP</span></a></li>
+                            <li role="presentation"><a href="#tarif5" aria-controls="tarif5" role="tab" data-toggle="tab"> <span>Минивен</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Tab panes-->
+                    <div class="tarif__tab-content">
+                        <div id="tarif1" role="tabpanel" class="tab-pane active">
+                            <!-- Special block-->
+                            <div class="s-block s-block--tab no--margin-bottom">
+                                <div class="s-block__title">Стандарт</div>
+                                <div class="s-block__wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>&nbsp;</th>
+                                                <th>&nbsp;</th>
+                                                <th>
+                                                    <div class="table__label">пн-ПТ</div>
+                                                </th>
+                                                <th>
+                                                    <div class="table__label">СБ-ВС</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Минимальная стоимость (включено 4 мин и 0 км)</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>199 Р. </strong></td>
+                                                <td class="td__label td__label--two"> <strong>299 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Бесплатное ожидание</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>2 мин</strong></td>
+                                                <td class="td__label td__label--two"> <strong>3 мин</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>дальнейшее ожидание оплачивается по счётчику согласно тарифу</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>-</strong></td>
+                                                <td class="td__label td__label--two"> <strong>-</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Далее по городу</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>0 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>0 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Далее по городу</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>13 Р./км</strong></td>
+                                                <td class="td__label td__label--two"> <strong>23 Р./км</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Стоимость поездки за пределами города (дополнительно)</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>13 Р./км</strong></td>
+                                                <td class="td__label td__label--two"> <strong>23 Р./км</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Салон для некурящих</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>20 Р./км</strong></td>
+                                                <td class="td__label td__label--two"> <strong>30 Р./км</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Перевозка велосипеда, лыж</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>0 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>0 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Багаж в салоне (кроме сумок и ручной клади), за единицу</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>100 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>200 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Перевозка животных (только при наличии специально оборудованной сумки или контейнера)</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>100 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>200 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Бустер</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>150 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>250 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Машина с жёлтым номером</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>100 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>100 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Детское кресло</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>0 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>0 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Кондиционер</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>100 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>200 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Перевозка лыж или сноуборда, за комплект</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>0 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>0 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Квитанция</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>100 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>200 Р.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__first"><i class="ion-minus"></i></td>
+                                                <td class="td__name"><span><span>Ожидание в пути</span></span></td>
+                                                <td class="td__label td__label--one"> <strong>13 Р.</strong></td>
+                                                <td class="td__label td__label--two"> <strong>12 Р.</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tarif2" role="tabpanel" class="tab-pane">
+                            <!-- Special block-->
+                            <div class="s-block s-block--tab no--margin-bottom">
+                                <div class="s-block__title">Комфорт</div>
+                                <div class="s-block__wrapper"></div>
+                            </div>
+                        </div>
+                        <div id="tarif3" role="tabpanel" class="tab-pane">
+                            <!-- Special block-->
+                            <div class="s-block s-block--tab no--margin-bottom">
+                                <div class="s-block__title">Бизнес</div>
+                                <div class="s-block__wrapper"></div>
+                            </div>
+                        </div>
+                        <div id="tarif4" role="tabpanel" class="tab-pane">
+                            <!-- Special block-->
+                            <div class="s-block s-block--tab no--margin-bottom">
+                                <div class="s-block__title">VIP</div>
+                                <div class="s-block__wrapper"></div>
+                            </div>
+                        </div>
+                        <div id="tarif5" role="tabpanel" class="tab-pane">
+                            <!-- Special block-->
+                            <div class="s-block s-block--tab no--margin-bottom">
+                                <div class="s-block__title">Минивен</div>
+                                <div class="s-block__wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Taxi-->
+            <section class="section taxi">
+                <div class="container">
+                    <div class="taxi__wrapper">
+                        <div><a href="#popup-call" class="taxi__button open-popup-link"><span>Вызвать такси</span><i></i><i><i class="icon icon--taxi"></i></i></a></div>
+                        <div class="hidden-sm hidden-xs"><img src="./img/driver-info-img-2.png" alt=""></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <nav role="navigation" class="footer__navigation hidden-xs hidden-sm">
+                    <ul>
+                        <li><a href="index.html" title="Главная">Главная</a></li>
+                        <li class="active"><a href="tarif.html" title="Тариф">Тариф</a></li>
+                        <li><a href="driver.html" title="Для водителей">Для водителей</a></li>
+                        <li><a href="contact.html" title="Контакты">Контакты</a></li>
+                        <li><a href="about.html" title="О компании">О компании</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__copyright">© 2017 dinamika</div>
+                <div class="footer__social"><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a><a href="#!"><i class="icon icon--twitter"></i></a><a href="#!"><i class="icon icon--vk"></i></a></div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Footer js-->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js" async></script>
+    </body>
+</html>

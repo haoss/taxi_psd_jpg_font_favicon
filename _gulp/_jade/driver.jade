@@ -41,6 +41,52 @@ html(lang="ru")
             .col-md-6
               p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
       
+      // Section why
+      section.section.why
+        .container
+          
+          .why__head
+            div почему dinamika?
+              small вы спросите нас, а мы вам ответим! Потому что - 
+          
+          .why__wrapper
+            .row
+              .col-lg-4.col-sm-6
+                .why__block
+                  .h3 Больше заказов
+                  p Подключившись вы будете получать более 30 заказов в день без простоя и холостого пробега!
+                  .why__block__icon
+                    i.icon.icon--why-1
+                      
+              .col-lg-4.col-sm-6
+                .why__block
+                  .h3 Бонусы для водителей
+                  p Поощрения для водителей с высокими рейтингами, система скидок при брендировании автомобиля
+                  .why__block__icon
+                    i.icon.icon--why-2
+                      
+              .col-lg-4.col-lg-offset-0.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+                .why__block
+                  .h3 Оплата в два счета
+                  p Вы можете с легкостью пополнить ваш баланс через терминалы Элекснет
+                  .why__block__icon
+                    i.icon.icon--why-3
+                      
+              .col-sm-6
+                .why__block
+                  .h3 Работайте, когда это удобно
+                  p Работайте по своему графику: без обязательного расписания и начальника
+                  .why__block__icon
+                    i.icon.icon--why-4
+                      
+              .col-sm-6
+                .why__block
+                  .h3 Отсутствие обязательных платежей
+                  p Вы платите только за завершенные поездки
+                  .why__block__icon
+                    i.icon.icon--why-5
+      
+      // Section connect
       section.section.connect
         .container
           
@@ -95,7 +141,6 @@ html(lang="ru")
                     li водитель состоит в трудовых отношениях с лицом, получившим разрешение — трудовой договор
                     li водитель арендует ТС у другого лица — свидетельство ИП, свидетельство ИНН, договор аренды
                     
-      
       // Section
       section.section.services.no--padding
         .container
@@ -129,11 +174,12 @@ html(lang="ru")
                 li левый руль, российские номера
                 li наличие ОСАГО
       
-      section.section
+      // Form
+      section.section.no--padding-bottom
         .container
           
           // Special block
-          .s-block.s-block--mobile
+          .s-block.s-block--mobile.no--margin-bottom
             .s-block__title заполнить заявку
             .s-block__wrapper
               
@@ -187,7 +233,23 @@ html(lang="ru")
                     .col-sm-4
                       button(type="submit").btn.btn--border.btn--contacts
                         span Отправить
-
+  
+      // Driver info
+      section.section.driver-info
+        .container
+          
+          .driver-info__head
+            div нет личного транспорта?
+              small не беда! Мы предоставим автомобиль компании!
+          
+          .row
+            .col-lg-6.col-sm-5
+              .driver-info__block.first
+                img(src="./img/driver-info-img-1.png", alt="")
+                
+            .col-lg-6.col-sm-7
+              .driver-info__block.last
+                img(src="./img/driver-info-img-2.png", alt="")
       
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
@@ -200,6 +262,6 @@ html(lang="ru")
 
     include ./_include/_footer-js
     // Load Scripts
-    script(src="./js/libs.js" async)
-    script(src="./js/common.js" async)
+    script(src="./js/libs.js")
+    script(src="./js/common.js")
     include ./_include/_js-body-bottom

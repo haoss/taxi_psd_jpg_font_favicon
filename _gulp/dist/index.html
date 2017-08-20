@@ -27,6 +27,7 @@
         <meta name="msapplication-config" content="./favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./font/fontello/css/fontello.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -103,7 +104,114 @@
                     </div>
                 </div>
             </section>
-            <div class="clear50"></div>
+            <!-- Tarif-->
+            <section class="section tarif tarif--index">
+                <div class="container">
+                    <div class="tarif__wrapper">
+                        <div class="tarif__wrapper__first">
+                            <!-- Nav tabs-->
+                            <div class="tarif__navigation tarif__navigation--index">
+                                <div class="tarif__menu__background"></div>
+                                <div class="tarif__button">
+                                    <div class="tarif__button__wrapper">
+                                        <p>Выберите класс автомобиля</p>
+                                        <button id="btn-mobile-tarif"><strong> <span>Стандарт</span><i class="ion-arrow-down-b"></i></strong></button>
+                                    </div>
+                                </div>
+                                <ul role="tablist" class="tarif__tab tarif__tab--index">
+                                    <li role="presentation"><a href="#tarif1" aria-controls="tarif1" role="tab" data-toggle="tab"> <span>Стандарт</span></a></li>
+                                    <li role="presentation"><a href="#tarif2" aria-controls="tarif2" role="tab" data-toggle="tab"> <span>Комфорт</span></a></li>
+                                    <li role="presentation"><a href="#tarif3" aria-controls="tarif3" role="tab" data-toggle="tab"> <span>Бизнес</span></a></li>
+                                    <li role="presentation"><a href="#tarif4" aria-controls="tarif4" role="tab" data-toggle="tab"> <span>VIP</span></a></li>
+                                    <li role="presentation"><a href="#tarif5" aria-controls="tarif5" role="tab" data-toggle="tab"> <span>Минивен</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tarif__wrapper__last">
+                            <div class="tarif__main">
+                                <div class="tarif__main__minute-price"><strong>19 <i class="fa-rouble"></i></strong><small>минута</small></div>
+                                <div class="tarif__main__content">
+                                    <div class="tarif__main__content__wrapper">
+                                        <div class="tarif__main__title">Оплачиваемый пробег</div>
+                                        <table>
+                                            <tr>
+                                                <td class="td__name"><span><span>Минимальная стоимость 1 км</span></span></td>
+                                                <td><strong>30 руб.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__name"><span><span>Минимальная стоимость 1 мин.</span></span></td>
+                                                <td><strong>13 руб.</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__name"><span><span>Движение за МКАД</span></span></td>
+                                                <td><strong>15 руб./км</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__name"><span><span>Подача за МКАД</span></span></td>
+                                                <td><strong>5 руб./км </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__name"><span><span>Отказ от поездки в аэропорту</span></span></td>
+                                                <td><strong>200 рублей</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td__name"><span><span>Отказ от поездки в городе</span></span></td>
+                                                <td><strong>50 рублей</strong></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tarif__main__auto tarif__main__auto--zero">
+                                    <div class="tarif__main__auto__wrapper"><img src="./img/tarif-auto.png" alt="" class="img"></div>
+                                </div>
+                            </div>
+                            <!-- Tab panes-->
+                            <div class="tarif__tab-content tarif__tab-content--index">
+                                <div id="tarif1" role="tabpanel" class="tab-pane">
+                                    <div class="tarif__main">
+                                        <div class="tarif__main__price"><strong>100<i class="fa-rouble"></i></strong><small>ЗА ПЕРВЫЕ 10 МИНУТ</small></div>
+                                        <div class="tarif__main__auto tarif__main__auto--animation">
+                                            <div class="tarif__main__auto__wrapper tarif__main__auto__wrapper--one"><img src="./img/tarif-auto-full-1-without-weel.png" alt="" class="img"><img src="./img/tarif-auto-full-1-weel.png" alt="" class="wheel wheel--one"><img src="./img/tarif-auto-full-1-weel.png" alt="" class="wheel wheel--two"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tarif2" role="tabpanel" class="tab-pane">
+                                    <div class="tarif__main">
+                                        <div class="tarif__main__price"><strong>249<i class="fa-rouble"></i></strong><small>ЗА ПЕРВЫЕ 10 МИНУТ</small></div>
+                                        <div class="tarif__main__auto tarif__main__auto--animation">
+                                            <div class="tarif__main__auto__wrapper tarif__main__auto__wrapper--two"><img src="./img/tarif-auto-full-2-without-weel.png" alt="" class="img"><img src="./img/tarif-auto-full-2-weel.png" alt="" class="wheel wheel--one"><img src="./img/tarif-auto-full-2-weel.png" alt="" class="wheel wheel--two"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tarif3" role="tabpanel" class="tab-pane">
+                                    <div class="tarif__main">
+                                        <div class="tarif__main__price"><strong>350<i class="fa-rouble"></i></strong><small>ЗА ПЕРВЫЕ 10 МИНУТ</small></div>
+                                        <div class="tarif__main__auto tarif__main__auto--animation">
+                                            <div class="tarif__main__auto__wrapper tarif__main__auto__wrapper--three"><img src="./img/tarif-auto-full-3-without-weel.png" alt="" class="img"><img src="./img/tarif-auto-full-3-weel.png" alt="" class="wheel wheel--one"><img src="./img/tarif-auto-full-3-weel.png" alt="" class="wheel wheel--two"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tarif4" role="tabpanel" class="tab-pane">
+                                    <div class="tarif__main">
+                                        <div class="tarif__main__price"><strong>850<i class="fa-rouble"></i></strong><small>ЗА ПЕРВЫЕ 10 МИНУТ</small></div>
+                                        <div class="tarif__main__auto tarif__main__auto--animation">
+                                            <div class="tarif__main__auto__wrapper tarif__main__auto__wrapper--four"><img src="./img/tarif-auto-full-4-without-weel.png" alt="" class="img"><img src="./img/tarif-auto-full-4-weel.png" alt="" class="wheel wheel--one"><img src="./img/tarif-auto-full-4-weel.png" alt="" class="wheel wheel--two"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tarif5" role="tabpanel" class="tab-pane">
+                                    <div class="tarif__main">
+                                        <div class="tarif__main__price"><strong>1850<i class="fa-rouble"></i></strong><small>ЗА ПЕРВЫЕ 10 МИНУТ</small></div>
+                                        <div class="tarif__main__auto tarif__main__auto--animation">
+                                            <div class="tarif__main__auto__wrapper tarif__main__auto__wrapper--five"><img src="./img/tarif-auto-full-5-without-weel.png" alt="" class="img"><img src="./img/tarif-auto-full-5-weel.png" alt="" class="wheel wheel--one"><img src="./img/tarif-auto-full-5-weel.png" alt="" class="wheel wheel--two"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Section additional-->
             <section class="section additional">
                 <div class="container">
@@ -180,7 +288,9 @@
         -->
         <!-- Footer js-->
         <!-- Load Scripts-->
-        <script src="./js/libs.js" async></script>
-        <script src="./js/common.js" async></script>
+        <script src="./js/libs.js"></script>
+        <script src="./js/libs/gsap/TweenMax.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js" async></script>
     </body>
 </html>

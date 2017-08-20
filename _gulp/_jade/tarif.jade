@@ -1,0 +1,322 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Тариф' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Тарифы' + ' - Taxi Dinamika' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Document head
+    .document__head
+      .document__head__wrapper(style="background-image: url('./img/document-top-banner4.png')")
+        
+        .container
+          h1 Тарифы
+          
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Главная
+              li
+                span Тарифы
+    
+    // Content
+    .content
+      
+      // Content text
+      section.section
+        .container
+          
+          .row
+            .col-md-6
+              p Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+            .col-md-6
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+      
+      // Tarif
+      section.section.tarif.no--padding
+        .container
+          
+          // Nav tabs
+          .tarif__navigation
+            .tarif__menu__background
+              
+            .tarif__button
+              .tarif__button__wrapper
+                p Выберите класс автомобиля
+                button#btn-mobile-tarif
+                  strong 
+                    span Стандарт
+                    i.ion-arrow-down-b
+                  
+            ul.tarif__tab(role='tablist')
+              li.active(role='presentation')
+                a(href='#tarif1', aria-controls='tarif1', role='tab', data-toggle='tab') 
+                  span Стандарт
+              li(role='presentation')
+                a(href='#tarif2', aria-controls='tarif2', role='tab', data-toggle='tab') 
+                  span Комфорт
+              li(role='presentation')
+                a(href='#tarif3', aria-controls='tarif3', role='tab', data-toggle='tab') 
+                  span Бизнес
+              li(role='presentation')
+                a(href='#tarif4', aria-controls='tarif4', role='tab', data-toggle='tab') 
+                  span VIP
+              li(role='presentation')
+                a(href='#tarif5', aria-controls='tarif5', role='tab', data-toggle='tab') 
+                  span Минивен
+          
+          // Tab panes
+          .tarif__tab-content
+            #tarif1.tab-pane.active(role='tabpanel')
+              
+              // Special block
+              .s-block.s-block--tab.no--margin-bottom
+                .s-block__title Стандарт
+                .s-block__wrapper
+                  
+                  table
+                    thead
+                      tr
+                        th &nbsp;
+                        th &nbsp;
+                        th
+                          .table__label пн-ПТ
+                        th
+                          .table__label СБ-ВС
+                    tbody
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Минимальная стоимость (включено 4 мин и 0 км)
+                        td.td__label.td__label--one 
+                          strong 199 Р. 
+                        td.td__label.td__label--two 
+                          strong 299 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Бесплатное ожидание
+                        td.td__label.td__label--one 
+                          strong 2 мин
+                        td.td__label.td__label--two 
+                          strong 3 мин
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span дальнейшее ожидание оплачивается по счётчику согласно тарифу
+                        td.td__label.td__label--one 
+                          strong -
+                        td.td__label.td__label--two 
+                          strong -
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Далее по городу
+                        td.td__label.td__label--one 
+                          strong 0 Р.
+                        td.td__label.td__label--two 
+                          strong 0 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Далее по городу
+                        td.td__label.td__label--one 
+                          strong 13 Р./км
+                        td.td__label.td__label--two 
+                          strong 23 Р./км
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Стоимость поездки за пределами города (дополнительно)
+                        td.td__label.td__label--one 
+                          strong 13 Р./км
+                        td.td__label.td__label--two 
+                          strong 23 Р./км
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Салон для некурящих
+                        td.td__label.td__label--one 
+                          strong 20 Р./км
+                        td.td__label.td__label--two 
+                          strong 30 Р./км
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Перевозка велосипеда, лыж
+                        td.td__label.td__label--one 
+                          strong 0 Р.
+                        td.td__label.td__label--two 
+                          strong 0 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Багаж в салоне (кроме сумок и ручной клади), за единицу
+                        td.td__label.td__label--one 
+                          strong 100 Р.
+                        td.td__label.td__label--two 
+                          strong 200 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Перевозка животных (только при наличии специально оборудованной сумки или контейнера)
+                        td.td__label.td__label--one 
+                          strong 100 Р.
+                        td.td__label.td__label--two 
+                          strong 200 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Бустер
+                        td.td__label.td__label--one 
+                          strong 150 Р.
+                        td.td__label.td__label--two 
+                          strong 250 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Машина с жёлтым номером
+                        td.td__label.td__label--one 
+                          strong 100 Р.
+                        td.td__label.td__label--two 
+                          strong 100 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Детское кресло
+                        td.td__label.td__label--one 
+                          strong 0 Р.
+                        td.td__label.td__label--two 
+                          strong 0 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Кондиционер
+                        td.td__label.td__label--one 
+                          strong 100 Р.
+                        td.td__label.td__label--two 
+                          strong 200 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Перевозка лыж или сноуборда, за комплект
+                        td.td__label.td__label--one 
+                          strong 0 Р.
+                        td.td__label.td__label--two 
+                          strong 0 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Квитанция
+                        td.td__label.td__label--one 
+                          strong 100 Р.
+                        td.td__label.td__label--two 
+                          strong 200 Р.
+                      tr
+                        td.td__first
+                          i.ion-minus
+                        td.td__name
+                          span
+                            span Ожидание в пути
+                        td.td__label.td__label--one 
+                          strong 13 Р.
+                        td.td__label.td__label--two 
+                          strong 12 Р.
+                  
+            #tarif2.tab-pane(role='tabpanel')
+              
+              // Special block
+              .s-block.s-block--tab.no--margin-bottom
+                .s-block__title Комфорт
+                .s-block__wrapper
+              
+            #tarif3.tab-pane(role='tabpanel')
+              
+              // Special block
+              .s-block.s-block--tab.no--margin-bottom
+                .s-block__title Бизнес
+                .s-block__wrapper
+                  
+            #tarif4.tab-pane(role='tabpanel')
+              
+              // Special block
+              .s-block.s-block--tab.no--margin-bottom
+                .s-block__title VIP
+                .s-block__wrapper
+                  
+            #tarif5.tab-pane(role='tabpanel')
+              
+              // Special block
+              .s-block.s-block--tab.no--margin-bottom
+                .s-block__title Минивен
+                .s-block__wrapper
+                  
+      // Taxi
+      section.section.taxi
+        .container
+          
+          .taxi__wrapper
+            div
+              a(href="#popup-call").taxi__button.open-popup-link
+                span Вызвать такси
+                i
+                i
+                  i.icon.icon--taxi
+            div.hidden-sm.hidden-xs
+              img(src="./img/driver-info-img-2.png", alt="")
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    include ./_include/_footer-js
+    // Load Scripts
+    script(src="./js/libs.js")
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

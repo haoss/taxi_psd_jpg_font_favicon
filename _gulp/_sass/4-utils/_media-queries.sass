@@ -88,6 +88,72 @@
     padding-right: 27px
     &__title
       left: 10px
+  .why
+    &__wrapper
+      padding: 0 50px
+    &__block
+      margin-bottom: 40px
+      padding-right: 135px
+  .driver-info
+    &__block
+      &.last
+        float: right
+        margin-top: -20px
+        img
+          max-width: 500px
+      &.first
+        padding-top: 17px
+        img
+          max-width: 375px
+  .tarif
+    &--index
+      padding-top: 105px
+      height: 465px
+    &__tab-content
+      table
+        .td
+          &__label
+            &--two
+              width: 130px
+    &__tab
+      li
+        margin: 0 10px
+        &>a, &>span
+          height: 30px
+          line-height: 30px
+          &::before
+            bottom: 0
+            height: auto
+            top: 0
+      &--index
+        li
+          margin: 0 0 3px 0
+          &>a, &>span
+            &::before
+              height: 13px
+              top: inherit
+    &__navigation
+      margin-bottom: 40px
+      &--index
+        margin-bottom: 0
+        padding-top: 15px
+    &__wrapper
+      &__first
+        width: 132px
+    &__main
+      &__content
+        margin-left: 212px
+        &__wrapper
+          margin-left: 285px
+      &__price
+        margin-top: -245px
+        margin-left: 20px
+      &__minute-price
+        margin-left: 195px
+
+  .taxi
+    img
+      max-width: 500px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -210,10 +276,83 @@
           width: 270px
           &::before
             border-bottom-width: 100px
+  .why
+    &__wrapper
+      padding: 0
+    &__block
+      padding-right: 95px
+    &__head
+      text-align: left
+      font-size: rem(43)
+      &>div
+        padding-left: 20px
+      small
+        left: 50px
+  .driver-info
+    &__head
+      font-size: rem(43)
+      text-align: left
+      small
+        padding-left: 55px
+        margin-top: 10px
+    &__block
+      &.first
+        padding-top: 10px
+        img
+          max-width: 286px
+      &.last
+        img
+          max-width: 384px
+  .tarif
+    &--index
+      padding-top: 55px
+      height: auto
+      padding-bottom: 200px
+    &__tab-content
+      table
+        .td
+          &__label
+            width: 105px
+            &--two
+              width: 50px
+    &__wrapper
+      display: block
+      &>div
+        display: block
+        &+div
+          padding-left: 0
+      &__first
+        width: 100%
+    &__tab
+      &--index
+        margin: 0
+        li
+          display: inline-block
+          margin: 0 10px
+    &__navigation
+      &--index
+        padding-top: 0
+        margin-bottom: 60px
+    &__main
+      &__price
+        margin-left: 33px
+      &__content
+        width: 445px
+        &__wrapper
+          margin-left: 218px
+      &__auto
+        margin-top: -81px
+        margin-left: -23px
+        &--zero
+          display: none
+  .taxi
+    &__button
+      margin-bottom: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-
+  .section
+    padding: 30px 0
   .animated
     transition-property: none !important
     transform: none !important
@@ -241,6 +380,7 @@
       height: 68px
       line-height: 68px
   .driver
+    padding-bottom: 0
     padding-top: 55px
     &__img
       float: none
@@ -251,6 +391,7 @@
       margin: -21px auto 0
       float: none
   .additional
+    padding: 0
     &__list
       li
         width: 100%
@@ -271,6 +412,7 @@
       margin-top: 0
       margin-bottom: 25px
   .about
+    padding: 0
     background-position: 0 0
     .container
       background: rgba($color-black,0.4)
@@ -328,6 +470,180 @@
       max-width: 195px
       margin: 20px auto 0
       display: block
+  .why
+    padding: 0
+    &__head
+      text-align: center
+      font-size: rem(38)
+      &>div
+        padding-left: 0
+      small
+        left: inherit
+        margin-top: 10px
+        line-height: 1.3
+    &__block
+      padding-right: 115px
+      margin-bottom: 30px !important
+    .row
+      &>div
+        &:last-child
+          .why__block
+            margin-bottom: 0 !important
+  .driver-info
+    padding-bottom: 0
+    &__head
+      font-size: rem(38)
+      text-align: center
+      small
+        padding-left: 0
+        margin-top: 15px
+        text-align: center
+    &__block
+      &.first
+        padding-top: 0
+      &.last
+        margin-top: 20px
+        float: none
+  .s-block
+    &--tab
+      padding-left: 15px
+      padding-right: 0
+  .tarif
+    padding-top: 0
+    &--index
+      padding-top: 40px
+      padding-bottom: 95px
+    &__tab-content
+      table
+        .td
+          &__name
+            padding-right: 10px
+            &>span
+              background: none
+          &__label
+            width: 90px
+            &--two
+              width: 80px
+    &__button
+      display: block
+      height: 30px
+      background: $color-yellow
+      p
+        font-size: rem(12)
+        margin: 0
+        position: absolute
+        left: 50%
+        transform: translate(-50%, -25px)
+        white-space: nowrap
+    &__navigation
+      margin: 0 -15px 50px -15px
+      width: calc(100% + 30px)
+      &--index
+        margin-bottom: 30px
+    &__tab
+      display: none
+      z-index: 1200
+      width: 290px
+      background: $color-white
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: 36px
+      padding: 0
+      li
+        display: block
+        margin: 0
+        &>a, &>span
+          display: block
+          height: 46px
+          line-height: 46px
+          text-align: center
+          border-bottom: 1px solid #f4f4f4
+          &::before
+            display: none
+        &.active
+          &>a, &>span
+            background: $color-yellow
+        &:last-child
+          &>a, &>span
+            border-bottom: 0
+    &__main
+      &__content
+        margin-left: 0
+        width: 100%
+        height: 290px
+        &__wrapper
+          margin-left: 46px
+      &__minute-price
+        margin-top: 0
+        margin-left: 0
+        left: 50%
+        top: 0
+      &__price
+        top: 0
+        margin-top: 0
+        margin-left: 0
+        left: 50%
+        margin-left: -152px
+        padding-top: 15px
+        width: 152px
+      &__auto
+        width: 450px
+        margin-left: 0
+        left: 50%
+        transform: translateX(-50%)
+        margin-top: -90px
+        &__wrapper
+          opacity: 1 !important
+          .wheel
+            width: 55px
+          &--one
+            .wheel--one
+              left: 77px
+              bottom: 12px
+            .wheel--two
+              left: 326px
+              bottom: 13px
+          &--two
+            .wheel--one
+              left: 64px
+              bottom: 12px
+            .wheel--two
+              left: 326px
+              bottom: 12px
+          &--three
+            .wheel--one
+              left: 70px
+              bottom: 15px
+            .wheel--two
+              left: 347px
+              bottom: 15px
+          &--four
+            .wheel--one
+              left: 66px
+              bottom: 15px
+            .wheel--two
+              left: 324px
+              bottom: 15px
+          &--five
+            .wheel
+              width: 50px
+            .wheel--one
+              left: 99px
+              bottom: 13px
+            .wheel--two
+              left: 324px
+              bottom: 13px
+
+        .img
+          max-width: 100%
+          height: auto
+    &__wrapper
+      &__last
+        position: relative
+        padding-top: 100px
+  .taxi
+    padding-bottom: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -426,16 +742,20 @@
       top: inherit
       bottom: 100%
       transform: translateY(14px)
-    &--contacts
+    &--contacts, &--mobile
       margin-top: 30px
       padding-left: 25px
       .s-block__wrapper
         padding-right: 20px
         padding-left: 7px
+    &--connect
+      .s-block__title
+        font-size: rem(27)
   .form-checkbox--contacts, .form-radio--contacts
     margin-left: -6px
   .advantages
     padding-top: 30px
+    padding-bottom: 0
   .h1, h1
     font-size: rem(30)
   .two-button
@@ -454,6 +774,129 @@
           top: 0
           left: inherit
           right: 17px
+  .why
+    &__head
+      font-size: rem(34)
+      margin-bottom: 30px
+      small
+        font-size: rem(16)
+        margin-top: 20px
+  .driver-info
+    &__head
+      font-size: rem(34)
+      small
+        font-size: rem(16)
+    &__block
+      &.first
+        img
+          max-width: 210px
+      &.last
+        margin-top: 10px
+        img
+          max-width: 280px
+  .s-block
+    &--tab
+      padding-left: 10px
+      padding-right: 0
+      .s-block__title
+        font-size: rem(16)
+        top: -23px
+  .tarif
+    &__tab-content
+      table
+        .td
+          &__name
+            padding-right: 10px
+            &>span
+              background: none
+          &__label
+            width: 70px !important
+      .table
+        &__label
+          padding: 0 9px
+          margin-left: -27px
+    &__main
+      &__content
+        margin: 0 -15px
+        width: calc(100% + 30px)
+        padding: 20px
+        &__wrapper
+          margin: 0
+          width: auto
+          background: none
+      &__price
+        width: 160px
+        margin-left: -145px
+      &__minute-price
+        margin-left: 15px
+      &__auto
+        left: 0
+        margin-left: -15px
+        transform: translateX(0)
+        width: 485px
+        .wheel
+          width: 59px
+        &__wrapper
+          &--one
+            .wheel--one
+              left: 83px
+              bottom: 13px
+            .wheel--two
+              left: 351px
+              bottom: 14px
+          &--two
+            .wheel--one
+              left: 69px
+              bottom: 13px
+            .wheel--two
+              left: 351px
+              bottom: 14px
+          &--three
+            .wheel--one
+              left: 76px
+              bottom: 15px
+            .wheel--two
+              left: 374px
+              bottom: 16px
+          &--four
+            .wheel--one
+              left: 71px
+              bottom: 16px
+            .wheel--two
+              left: 350px
+              bottom: 16px
+          &--five
+
+            .wheel
+              width: 55px
+            .wheel--one
+              left: 106px
+              bottom: 13px
+            .wheel--two
+              left: 349px
+              bottom: 15px
+  .taxi
+    &__button
+      height: 82px
+      width: 240px
+      margin-left: 45px
+      margin-top: 33px
+      &>span
+        font-size: rem(20)
+      &>i
+        &:nth-child(2)
+          height: 66px
+          width: 100px
+          margin-left: -45px
+          margin-top: -33px
+        &:nth-child(3)
+          height: 34px
+          width: 50px
+          margin-left: 32px
+          .icon
+            transform: skewX(-7deg) scale(0.6)
+            left: 6px
+            top: 1px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

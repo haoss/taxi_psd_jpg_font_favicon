@@ -62,22 +62,8 @@ $(document).on('ready', function(){
   });
 
   // Menu
-  $('#btn-mobile').on('click', function(e){
-    e.stopPropagation();
-    $(this).toggleClass('is-active');
-    $('.header').toggleClass('is-active');
-  });
-
-  $(document).on('click', function(){
-    setTimeout(function(){
-      $('#btn-mobile').removeClass('is-active');
-      $('.header').removeClass('is-active');
-    }, 500)
-  });
-
-  $(document).on('click', '.header__navigation', function(e){
-    e.stopPropagation();
-  });
+  navigation();
+  menuAnimation();
 
   // Chrome Smooth Scroll
   try {
@@ -104,6 +90,10 @@ $(window).on('resize', function(){
   if (width > 991) {
     $('#btn-mobile').removeClass('is-active');
     $('.header').removeClass('is-active');
+  }
+
+  if (width > 767) {
+    $('.tarif__navigation').removeClass('is-active');
   }
 });
 /*
@@ -169,4 +159,97 @@ function simpleForm(form, callback) {
 
     return false;
   });
+}
+
+function navigation(){
+  var header = $('.header'),
+      btnMobile = $('#btn-mobile'),
+      tarifNavigation = $('.tarif__navigation'),
+      btnMobileTarif = $('#btn-mobile-tarif'),
+      btnMobileTarifText = btnMobileTarif.find('span'),
+      btnMobileTarifLi = $('.tarif__tab li'),
+      btnMobileTarifActive = $('.tarif__tab li.active a span').text(),
+      width = $(window).width();
+  ;
+
+  btnMobile.on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    header.toggleClass('is-active');
+  });
+
+  $(document).on('click', function(){
+    setTimeout(function(){
+      btnMobile.removeClass('is-active');
+      header.removeClass('is-active');
+    }, 500)
+  });
+
+  $(document).on('click', '.header__navigation', function(e){
+    e.stopPropagation();
+  });
+
+  btnMobileTarif.on('click', function(e){
+    e.stopPropagation();
+    // $(this).toggleClass('is-active');
+    tarifNavigation.toggleClass('is-active');
+  });
+  $(document).on('click', function(){
+    tarifNavigation.removeClass('is-active');
+  });
+
+  btnMobileTarifLi.find('a').on('click', function(){
+    var text = $(this).find('span').text();
+    btnMobileTarifText.text(text);
+  });
+
+  if (width < 991) {
+    $('.tarif__tab--index > li:first-child').addClass('active');
+    $('.tarif__tab-content .tab-pane:first-child').addClass('active');
+    $('.tarif__main__auto--animation .tarif__main__auto__wrapper').css({opacity: 1})
+    $('.tarif__main__price').css({opacity: 1})
+  }
+
+  setTimeout(function(){
+    btnMobileTarifText.text($('.tarif__tab > li:first-child').text());
+    // console.log('rest');
+  }, 500)
+
+}
+
+function menuAnimation() {
+  var a = $('.tarif__tab--index li a');
+  var width = $(window).width();
+
+  a.each(function(){
+    $(this).on('click', function(){
+      if (width > 767) {
+        TweenMax.set($('.tab-pane .tarif__main__price'), {opacity: 0});
+        TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper'), {opacity: 0});
+        TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--one'), {rotation: '0deg'});
+        TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--two'), {rotation: '0deg'});
+
+        setTimeout(function(){
+          var auto = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper');
+          var price = $('.tab-pane.active .tarif__main__price');
+          var wheel1 = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--one');
+          var wheel2 = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--two');
+
+          TweenMax.fromTo(price, 1, {opacity: 0}, {autoAlpha: 1, ease: Power2.easeInOut});
+
+          var tl = new TimelineMax();
+          tl.set(auto, {opacity: 1})
+            .fromTo(auto, 1.5, {left: '2000px'}, {left: '-50px', ease: Power2.easeOut})
+            .to(wheel1, 1.5, {rotation: '-320deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
+            .to(wheel2, 1.5, {rotation: '-320deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
+            .to(auto, 0.5, {left: '0px', ease: Power3.ease}, 'wheelPosition')
+            .to(wheel1, 0.5, {rotation: '-250deg', transformOrigin:"50% 50%", ease: Power2.ease}, 'wheelPosition', 0)
+            .to(wheel2, 0.5, {rotation: '-250deg', transformOrigin:"50% 50%", ease: Power2.ease}, 'wheelPosition', 0)
+          ;
+
+        }, 100);
+      }
+    });
+  });
+
 }

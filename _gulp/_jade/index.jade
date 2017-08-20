@@ -40,7 +40,159 @@ html(lang="ru")
                 span Лучшего качества
                 small по оптимальной стоимости для наших клиентов!
       
-      .clear50
+      // Tarif
+      section.section.tarif.tarif--index
+        .container
+          
+          .tarif__wrapper
+            .tarif__wrapper__first
+              // Nav tabs
+              .tarif__navigation.tarif__navigation--index
+                .tarif__menu__background
+                  
+                .tarif__button
+                  .tarif__button__wrapper
+                    p Выберите класс автомобиля
+                    button#btn-mobile-tarif
+                      strong 
+                        span Стандарт
+                        i.ion-arrow-down-b
+                          
+                ul.tarif__tab.tarif__tab--index(role='tablist')
+                  li(role='presentation')
+                    a(href='#tarif1', aria-controls='tarif1', role='tab', data-toggle='tab') 
+                      span Стандарт
+                  li(role='presentation')
+                    a(href='#tarif2', aria-controls='tarif2', role='tab', data-toggle='tab') 
+                      span Комфорт
+                  li(role='presentation')
+                    a(href='#tarif3', aria-controls='tarif3', role='tab', data-toggle='tab') 
+                      span Бизнес
+                  li(role='presentation')
+                    a(href='#tarif4', aria-controls='tarif4', role='tab', data-toggle='tab') 
+                      span VIP
+                  li(role='presentation')
+                    a(href='#tarif5', aria-controls='tarif5', role='tab', data-toggle='tab') 
+                      span Минивен
+          
+            .tarif__wrapper__last
+              
+              .tarif__main
+                .tarif__main__minute-price
+                  strong 19 
+                    i.fa-rouble
+                  small минута
+                .tarif__main__content
+                  .tarif__main__content__wrapper
+                    .tarif__main__title Оплачиваемый пробег
+                    table
+                      tr
+                        td.td__name
+                          span
+                            span Минимальная стоимость 1 км
+                        td
+                          strong 30 руб.
+                      tr
+                        td.td__name
+                          span
+                            span Минимальная стоимость 1 мин.
+                        td
+                          strong 13 руб.
+                      tr
+                        td.td__name
+                          span
+                            span Движение за МКАД
+                        td
+                          strong 15 руб./км
+                      tr
+                        td.td__name
+                          span
+                            span Подача за МКАД
+                        td
+                          strong 5 руб./км 
+                      tr
+                        td.td__name
+                          span
+                            span Отказ от поездки в аэропорту
+                        td
+                          strong 200 рублей
+                      tr
+                        td.td__name
+                          span
+                            span Отказ от поездки в городе
+                        td
+                          strong 50 рублей
+                        
+                .tarif__main__auto.tarif__main__auto--zero
+                  .tarif__main__auto__wrapper
+                    img(src="./img/tarif-auto.png", alt="").img
+              
+              // Tab panes
+              .tarif__tab-content.tarif__tab-content--index
+                #tarif1.tab-pane(role='tabpanel')
+                  
+                  .tarif__main
+                    .tarif__main__price
+                      strong 100
+                        i.fa-rouble
+                      small ЗА ПЕРВЫЕ 10 МИНУТ
+                    .tarif__main__auto.tarif__main__auto--animation
+                      .tarif__main__auto__wrapper.tarif__main__auto__wrapper--one
+                        img(src="./img/tarif-auto-full-1-without-weel.png", alt="").img
+                        img(src="./img/tarif-auto-full-1-weel.png", alt="").wheel.wheel--one
+                        img(src="./img/tarif-auto-full-1-weel.png", alt="").wheel.wheel--two
+                    
+                #tarif2.tab-pane(role='tabpanel')
+                  
+                  .tarif__main
+                    .tarif__main__price
+                      strong 249
+                        i.fa-rouble
+                      small ЗА ПЕРВЫЕ 10 МИНУТ
+                    .tarif__main__auto.tarif__main__auto--animation
+                      .tarif__main__auto__wrapper.tarif__main__auto__wrapper--two
+                        img(src="./img/tarif-auto-full-2-without-weel.png", alt="").img
+                        img(src="./img/tarif-auto-full-2-weel.png", alt="").wheel.wheel--one
+                        img(src="./img/tarif-auto-full-2-weel.png", alt="").wheel.wheel--two
+                  
+                #tarif3.tab-pane(role='tabpanel')
+                  
+                  .tarif__main
+                    .tarif__main__price
+                      strong 350
+                        i.fa-rouble
+                      small ЗА ПЕРВЫЕ 10 МИНУТ
+                    .tarif__main__auto.tarif__main__auto--animation
+                      .tarif__main__auto__wrapper.tarif__main__auto__wrapper--three
+                        img(src="./img/tarif-auto-full-3-without-weel.png", alt="").img
+                        img(src="./img/tarif-auto-full-3-weel.png", alt="").wheel.wheel--one
+                        img(src="./img/tarif-auto-full-3-weel.png", alt="").wheel.wheel--two
+                      
+                #tarif4.tab-pane(role='tabpanel')
+                  
+                  .tarif__main
+                    .tarif__main__price
+                      strong 850
+                        i.fa-rouble
+                      small ЗА ПЕРВЫЕ 10 МИНУТ
+                    .tarif__main__auto.tarif__main__auto--animation
+                      .tarif__main__auto__wrapper.tarif__main__auto__wrapper--four
+                        img(src="./img/tarif-auto-full-4-without-weel.png", alt="").img
+                        img(src="./img/tarif-auto-full-4-weel.png", alt="").wheel.wheel--one
+                        img(src="./img/tarif-auto-full-4-weel.png", alt="").wheel.wheel--two
+                      
+                #tarif5.tab-pane(role='tabpanel')
+                  
+                  .tarif__main
+                    .tarif__main__price
+                      strong 1850
+                        i.fa-rouble
+                      small ЗА ПЕРВЫЕ 10 МИНУТ
+                    .tarif__main__auto.tarif__main__auto--animation
+                      .tarif__main__auto__wrapper.tarif__main__auto__wrapper--five
+                        img(src="./img/tarif-auto-full-5-without-weel.png", alt="").img
+                        img(src="./img/tarif-auto-full-5-weel.png", alt="").wheel.wheel--one
+                        img(src="./img/tarif-auto-full-5-weel.png", alt="").wheel.wheel--two
       
       // Section additional
       section.section.additional
@@ -136,6 +288,7 @@ html(lang="ru")
 
     include ./_include/_footer-js
     // Load Scripts
-    script(src="./js/libs.js" async)
-    script(src="./js/common.js" async)
+    script(src="./js/libs.js")
+    script(src="./js/libs/gsap/TweenMax.min.js")
+    script(src="./js/common.js")
     include ./_include/_js-body-bottom
