@@ -206,8 +206,10 @@ function navigation(){
   if (width < 991) {
     $('.tarif__tab--index > li:first-child').addClass('active');
     $('.tarif__tab-content .tab-pane:first-child').addClass('active');
-    $('.tarif__main__auto--animation .tarif__main__auto__wrapper').css({opacity: 1})
-    $('.tarif__main__price').css({opacity: 1})
+    $('.tarif__main__auto--animation .tarif__main__auto__wrapper').css({opacity: 1});
+    $('.tarif__main__price').css({opacity: 1});
+    $('.tarif__main__minute-price--tab').css({opacity: 1});
+    $('.tarif__main__auto--zero .img').css({opacity: 1});
   }
 
   setTimeout(function(){
@@ -225,26 +227,31 @@ function menuAnimation() {
     $(this).on('click', function(){
       if (width > 767) {
         TweenMax.set($('.tab-pane .tarif__main__price'), {opacity: 0});
+        TweenMax.set($('.tab-pane .tarif__main__minute-price--tab'), {opacity: 0});
         TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper'), {opacity: 0});
         TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--one'), {rotation: '0deg'});
         TweenMax.set($('.tab-pane .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--two'), {rotation: '0deg'});
 
+
         setTimeout(function(){
           var auto = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper');
           var price = $('.tab-pane.active .tarif__main__price');
+          var tab = $('.tab-pane.active .tarif__main__minute-price--tab');
           var wheel1 = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--one');
           var wheel2 = $('.tab-pane.active .tarif__main__auto--animation .tarif__main__auto__wrapper .wheel--two');
 
           TweenMax.fromTo(price, 1, {opacity: 0}, {autoAlpha: 1, ease: Power2.easeInOut});
+          TweenMax.fromTo(tab, 1, {opacity: 0}, {autoAlpha: 1, ease: Power2.easeInOut});
+          TweenMax.to($('.tarif__main__auto--zero .img'), 0.5, {autoAlpha: 0, ease: Power2.easeInOut});
 
           var tl = new TimelineMax();
           tl.set(auto, {opacity: 1})
             .fromTo(auto, 1.5, {left: '2000px'}, {left: '-50px', ease: Power2.easeOut})
-            .to(wheel1, 1.5, {rotation: '-320deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
-            .to(wheel2, 1.5, {rotation: '-320deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
+            .to(wheel1, 1.5, {rotation: '-450deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
+            .to(wheel2, 1.5, {rotation: '-450deg', transformOrigin:"50% 50%", ease: Power2.ease}, 0)
             .to(auto, 0.5, {left: '0px', ease: Power3.ease}, 'wheelPosition')
-            .to(wheel1, 0.5, {rotation: '-250deg', transformOrigin:"50% 50%", ease: Power2.ease}, 'wheelPosition', 0)
-            .to(wheel2, 0.5, {rotation: '-250deg', transformOrigin:"50% 50%", ease: Power2.ease}, 'wheelPosition', 0)
+            .to(wheel1, 0.5, {rotation: '-370deg', transformOrigin:"50% 50%", ease: Power2.ease}, 'wheelPosition', 0)
+            .to(wheel2, 0.5, {rotation: '-370deg', transformOrigin:"50% 50%", ease: Power4.ease}, 'wheelPosition', 0)
           ;
 
         }, 100);

@@ -5746,11 +5746,11 @@ table.table {
   padding: 0;
   overflow: hidden;
   background-color: #000000;
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-image: url("../img/about-background.png"); }
   .about__wrapper {
-    height: 705px;
+    height: 625px;
     position: relative;
     width: 100%; }
   .about__button {
@@ -6369,6 +6369,10 @@ ul.list {
   font-family: "Intro";
   padding-top: 30px;
   padding-left: 27px; }
+  .tarif__main__minute-price--tab {
+    margin-top: -275px;
+    background: none;
+    opacity: 0; }
   .tarif__main__minute-price strong {
     font-family: "Intro";
     display: block;
