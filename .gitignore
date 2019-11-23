@@ -6,6 +6,7 @@ node_modules
 bower_components
 _sass__copy
 _design
+_backup
 *.node
 .gulp
 *.orig
